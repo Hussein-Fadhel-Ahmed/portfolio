@@ -523,57 +523,70 @@ html[dir="rtl"] .timeline-item:nth-child(even) .timeline-icon { right: -24px; }
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 1.2rem 0; /* Increased padding */
+    padding: 1.5rem 0; /* Increased padding for better separation */
     border-bottom: 1px solid var(--border-color-current);
 }
 .certificates-list .certificate-item:last-child { border-bottom: none; }
 
 .certificate-info {
     display: flex;
-    align-items: flex-start;
-    margin-bottom: 1rem; /* Increased space */
-    flex-grow: 1;
+    align-items: flex-start; /* Align icon and text nicely */
+    margin-bottom: 1.2rem; /* Increased space */
+    width: 100%; /* Ensure it takes full width before button wraps */
 }
 
 .certificate-info i {
-    font-size: 1.6rem; /* Slightly larger icon */
+    font-size: 1.8rem; /* Larger icon */
     color: var(--accent-color-current);
-    margin-inline-end: 1.2rem; /* More space for icon */
-    width: 30px; /* Wider icon container */
+    margin-inline-end: 1.3rem; /* More space for icon */
+    width: 35px; /* Wider icon container */
     text-align: center;
-    margin-top: 0.1em;
+    margin-top: 0.2em; /* Fine-tune vertical alignment */
 }
 
-.certificate-info span {
-    font-size: 1.1rem; /* Larger text */
-    color: var(--text-color-muted-current);
+.certificate-info-text {
+    flex-grow: 1;
 }
-.certificate-info span strong {
+
+.certificate-info-text strong { /* Certificate Name */
     color: var(--text-color-current);
     display: block;
-    margin-bottom: 0.3rem; /* More space for name */
-    font-size: 1.2rem; /* Larger name */
+    margin-bottom: 0.5rem; /* More space for name */
+    font-size: 1.3rem; /* Larger name */
+    font-weight: 600;
 }
-.certificate-description {
-    font-size: 0.95rem; /* Slightly larger description */
+.certificate-info-text span { /* Issuer and Date */
+    font-size: 1.05rem; /* Slightly larger text */
     color: var(--text-color-muted-current);
-    margin-top: 0.6rem;
-    padding-inline-start: calc(30px + 1.2rem); /* Adjust indent based on icon size/margin */
-    line-height: 1.6;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.certificate-description {
+    font-size: 1rem; /* Slightly larger description */
+    color: var(--text-color-muted-current);
+    margin-top: 0.8rem;
+    padding-inline-start: calc(35px + 1.3rem); /* Adjust indent based on icon size/margin */
+    line-height: 1.65;
+    width: 100%; /* Ensure it takes full width */
+    box-sizing: border-box;
 }
 
 .download-certificate-button {
-    padding: 0.6rem 1.2rem; /* Larger button padding */
-    font-size: 0.9rem; /* Larger button font */
-    margin-top: 0.5rem;
+    padding: 0.8rem 1.5rem; /* Larger button padding */
+    font-size: 0.95rem; /* Larger button font */
+    margin-top: 1rem; /* More space above button */
     align-self: flex-start;
     background: linear-gradient(90deg, var(--accent-color-current), var(--accent-color-secondary-current));
     color: var(--primary-color-dark) !important;
     border-radius: var(--border-radius-main);
     text-transform: none;
-    font-weight: 500;
+    font-weight: 600; /* Bolder text */
     border: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-flex; /* Align icon and text if any */
+    align-items: center;
+    gap: 0.5rem;
 }
 body.light-theme .download-certificate-button {
     color: var(--primary-color-light) !important;
@@ -586,22 +599,28 @@ body.light-theme .download-certificate-button {
 
 
 /* Adjust layout for wider screens where button can be beside info */
-@media (min-width: 700px) { /* Adjusted breakpoint */
+@media (min-width: 700px) {
     .certificates-list .certificate-item {
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        align-items: center; /* Vertically center items in the row */
+    }
+    .certificate-main-content { /* Wrapper for info and description */
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
     }
     .certificate-info {
-        margin-bottom: 0;
+        margin-bottom: 0.5rem; /* Reduce margin when side-by-side */
     }
     .download-certificate-button {
         margin-top: 0;
         margin-inline-start: 1.5rem; /* More space */
-        align-self: center;
+        align-self: center; /* Center button vertically with text content */
     }
     .certificate-description {
-         padding-inline-start: calc(30px + 1.2rem); /* Keep consistent indent or adjust as needed */
+         padding-inline-start: calc(35px + 1.3rem); /* Keep consistent indent */
+         margin-top: 0.3rem; /* Reduce top margin */
     }
 }
 
@@ -746,6 +765,13 @@ body.light-theme footer { background-color: var(--secondary-color-light); color:
         margin-bottom: 1rem;
     }
 
+/* RTL override for hero section order on small screens */
+    html[dir="rtl"] .hero-image-container {
+        order: 1; /* Ensure image is first */
+    }
+    html[dir="rtl"] .hero-text {
+        order: 2; /* Ensure text is second */
+    }
     /* تعديل الجدول الزمني للشاشات المتوسطة */
     html[dir="ltr"] .timeline-container::before { left: 20px; }
     html[dir="rtl"] .timeline-container::before { right: 20px; }
@@ -788,13 +814,17 @@ body.light-theme footer { background-color: var(--secondary-color-light); color:
     header { padding: 0.8rem 4%; }
     .content-section { padding: 4rem 4%; }
     .nav-links {
-        position: fixed; height: 100vh; top: 0;
+        position: fixed; height: 100vh; top: 0; /* Full height for overlay */
         background-color: var(--primary-color-current);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
-        display: flex; flex-direction: column; align-items: center; justify-content: center;
+        display: flex; flex-direction: column; align-items: center; justify-content: flex-start; /* Align to top */
         width: 100%; z-index: 999; transition: transform 0.4s ease-in-out;
         box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        overflow-y: auto; /* Enable scrolling */
+        padding-top: 4rem; /* Add padding for content spacing */
+        padding-bottom: 2rem; /* Add padding for content spacing */
+        box-sizing: border-box; /* Include padding in height considerations */
     }
     html[dir="rtl"] .nav-links { right: 0; transform: translateX(100%); }
     html[dir="ltr"] .nav-links { left: 0; transform: translateX(-100%); }
@@ -812,9 +842,9 @@ body.light-theme footer { background-color: var(--secondary-color-light); color:
         transition: opacity 0.3s ease, transform 0.3s ease;
         transition-delay: calc(0.05s * var(--item-index, 0));
     }
-    .nav-links a { 
-        font-size: 1.4rem; 
-        color: var(--text-color-current); 
+    .nav-links a {
+        font-size: 1.1rem; /* Reduced font size for better fit */
+        color: var(--text-color-current);
         padding: 0.8rem 1.5rem;
         border-radius: var(--border-radius-main);
         transition: background-color 0.3s ease, color 0.3s ease;
@@ -917,9 +947,38 @@ body:not(.light-theme) .controls-in-nav button:hover {
     .hero-text h1 { font-size: 2.4rem; } /* Adjusted */
     .hero-text #hero-title { font-size: 1.4rem; } /* Adjusted */
     .hero-text .typing-text-container { font-size: 1.2rem; } /* Adjusted */
-    /* .toolkit-grid rule removed as flex-direction: column handles stacking */
+
+    /* Toolkit & Languages Progress Bar Enhancement for 768px */
+    .progress-bar-container {
+        width: 120px; /* Increased width */
+        height: 14px; /* Increased height */
+    }
+    .skill-percentage-text {
+        font-size: 1rem; /* Increased font size */
+    }
+
+    /* Certificate display enhancements for 768px */
+    .certificate-info i {
+        font-size: 1.6rem;
+        margin-inline-end: 1rem;
+        width: 30px;
+    }
+    .certificate-info-text strong {
+        font-size: 1.2rem;
+    }
+    .certificate-info-text span {
+        font-size: 1rem;
+    }
+    .certificate-description {
+        font-size: 0.95rem;
+        padding-inline-start: calc(30px + 1rem);
+    }
+    .download-certificate-button {
+        padding: 0.7rem 1.3rem;
+        font-size: 0.9rem;
+    }
+
     .portfolio-grid { grid-template-columns: 1fr; gap: 2rem; } /* Ensure single column */
-    /* .recognitions-content rule removed as flex-direction: column handles stacking */
     #contact-form { gap: 1.2rem; }
     #contact-form input, #contact-form textarea { padding: 1rem; font-size: 1rem; }
     #contact-form button { padding: 1rem 1.8rem; font-size: 1rem; }
@@ -987,14 +1046,28 @@ body:not(.light-theme) .controls-in-nav button:hover {
     .toolkit-category-header i { font-size: 1.8rem; }
     .toolkit-category-header h3 { font-size: 1.5rem; }
     .category-description { font-size: 0.95rem; margin-bottom: 1.5rem; }
-    .skill-name, .language-name { font-size: 1rem; }
-    .skill-percentage-text { font-size: 0.85rem; }
-    .skill-details { font-size: 0.85rem; }
-    .progress-bar-container { width: 80px; height: 10px; }
+    .skill-name, .language-name { font-size: 1.05rem; } /* Slightly larger */
+    .skill-percentage-text { font-size: 0.9rem; font-weight: 500; } /* Clearer percentage */
+    .skill-details { font-size: 0.9rem; }
+    .progress-bar-container { width: 150px; height: 16px; } /* Significantly larger progress bar */
     
-    /* تعديل الشهادات */
-    .certificate-info i { font-size: 1.4rem; width: 25px; }
-    .certificate-info span { font-size: 0.95rem; }
+    /* تعديل الشهادات for 480px */
+    .certificate-info i { font-size: 1.5rem; width: 28px; margin-inline-end: 0.8rem;}
+    .certificate-info-text strong { font-size: 1.15rem; }
+    .certificate-info-text span { font-size: 0.9rem; }
+    .certificate-description {
+        font-size: 0.9rem;
+        padding-inline-start: calc(28px + 0.8rem); /* Adjust indent */
+        margin-top: 0.5rem;
+    }
+    .download-certificate-button {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.85rem;
+        width: 100%; /* Make button full width for easier tapping */
+        text-align: center;
+        justify-content: center;
+        margin-top: 0.8rem;
+    }
     
     /* تعديل نموذج الاتصال */
     #contact-form { gap: 1rem; }
@@ -1060,22 +1133,36 @@ body:not(.light-theme) .controls-in-nav button:hover {
     /* تعديل المهارات واللغات */
     .toolkit-category-header i { font-size: 1.6rem; }
     .toolkit-category-header h3 { font-size: 1.3rem; }
-    .skill-name, .language-name { font-size: 0.95rem; }
-    .progress-bar-container { width: 70px; }
+    .skill-name, .language-name { font-size: 1rem; } /* Adjusted for very small screens */
+    .skill-percentage-text { font-size: 0.85rem; }
+    .progress-bar-container { width: 120px; height: 14px; } /* Larger progress bar for very small screens */
     
+    /* Certificate adjustments for 375px */
+    .certificate-info i { font-size: 1.4rem; width: 25px; }
+    .certificate-info-text strong { font-size: 1.1rem; }
+    .certificate-info-text span { font-size: 0.85rem; }
+     .certificate-description {
+        font-size: 0.85rem;
+        padding-inline-start: calc(25px + 0.8rem); /* Adjust indent */
+    }
+    .download-certificate-button {
+        font-size: 0.8rem;
+    }
+
     /* تعديل نموذج الاتصال */
     #contact-form input, #contact-form textarea { padding: 0.7rem; font-size: 0.9rem; }
 }
-    html[dir="ltr"] .timeline-item:nth-child(odd) .timeline-icon { right: -20px; }
-    html[dir="ltr"] .timeline-item:nth-child(even) .timeline-icon { left: -20px; }
-    html[dir="rtl"] .timeline-item:nth-child(odd) .timeline-icon { left: -20px; }
-    html[dir="rtl"] .timeline-item:nth-child(even) .timeline-icon { right: -20px; }
-    .toolkit-category-header i { font-size: 2rem; }
-    .toolkit-category-header h3 { font-size: 1.6rem; }
-    .skill-name { font-size: 1.05rem; }
-    .certificate-info i { font-size: 1.4rem; margin-inline-end: 0.8rem; width: 25px; }
-    .certificate-info span strong { font-size: 1.1rem; }
-    .download-certificate-button { padding: 0.5rem 1rem; font-size: 0.8rem;}
+    /* These specific overrides might be conflicting or redundant after media query changes. Reviewing them. */
+    /* html[dir="ltr"] .timeline-item:nth-child(odd) .timeline-icon { right: -20px; } */
+    /* html[dir="ltr"] .timeline-item:nth-child(even) .timeline-icon { left: -20px; } */
+    /* html[dir="rtl"] .timeline-item:nth-child(odd) .timeline-icon { left: -20px; } */
+    /* html[dir="rtl"] .timeline-item:nth-child(even) .timeline-icon { right: -20px; } */
+    /* .toolkit-category-header i { font-size: 2rem; } */ /* Already handled in media queries */
+    /* .toolkit-category-header h3 { font-size: 1.6rem; } */ /* Already handled in media queries */
+    /* .skill-name { font-size: 1.05rem; } */ /* Already handled in media queries */
+    /* .certificate-info i { font-size: 1.4rem; margin-inline-end: 0.8rem; width: 25px; } */ /* Handled in media queries */
+    /* .certificate-info span strong { font-size: 1.1rem; } */ /* Handled in media queries */
+    /* .download-certificate-button { padding: 0.5rem 1rem; font-size: 0.8rem;} */ /* Handled in media queries */
 
 /* Nav Link Fade Animations */
 @keyframes navLinkFadeRTL { from { opacity: 0; transform: translateX(60px); } to { opacity: 1; transform: translateX(0); } }

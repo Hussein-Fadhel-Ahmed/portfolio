@@ -391,9 +391,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     certHtml += `
                         <li class="certificate-item">
-                            <div class="certificate-info">
-                                <i class="fas fa-${cert.issuer_icon || 'certificate'}"></i>
-                                <span><strong>${cert.name}</strong> ${cert.date ? `(${cert.date})` : ''}</span>
+                            <div class="certificate-main-content">
+                                <div class="certificate-info">
+                                    <i class="fas fa-${cert.issuer_icon || 'certificate'}"></i>
+                                    <div class="certificate-info-text">
+                                        <strong>${cert.name}</strong>
+                                        <span>${cert.date ? `(${cert.date})` : ''}</span>
+                                    </div>
+                                </div>
                                 ${cert.description ? `<p class="certificate-description">${cert.description}</p>` : ''}
                             </div>
                             ${downloadButtonHtml}
