@@ -1,0 +1,344 @@
+{
+  "ar": {
+    "about_me": {
+      "name": "حسين فاضل",
+      "title": "مطور حلول تقنية متخصص في الأتمتة وإنترنت الأشياء.",
+      "profile_image": "img/me.jpg",
+      "tagline": "أترجم الأفكار المبتكرة إلى واقع ملموس، كودًا بكود، وحلاً بحل.",
+      "introduction": "مهندس تقني متخصص، أمتلك شغفًا بتحويل التحديات المعقدة إلى حلول عملية وذكية. مسيرتي في عالم التكنولوجيا هي رحلة متواصلة من الابتكار والتطوير، حيث أدمج بين الخبرة الهندسية العميقة والرؤية التصميمية لتقديم حلول ذات تأثير حقيقي. أؤمن بأن كل مشروع هو فرصة لإثبات القدرات وتحقيق إنجاز جديد.",
+      "contact_details": {
+        "email": "hussein.alali80163@gmail.com",
+        "phone": "07830117210",
+        "linkedin": "hussein-fadhel-ahmed",
+        "address": "البصرة، العراق"
+      }
+    },
+    "my_journey": {
+      "title": "الخبرات والمشاريع",
+      "intro": "كل محطة في مسيرتي المهنية تمثل إضافة نوعية لخبراتي، وتعزيزًا لقدراتي على مواجهة التحديات وتحقيق الأهداف بكفاءة عالية.",
+      "timeline": [
+        {
+          "type": "education",
+          "period": "2021 – 2025",
+          "heading": "بكالوريوس هندسة تكنولوجيا التحكم والأتمتة",
+          "subheading": "الجامعة التقنية الجنوبية, البصرة",
+          "description": "في رحاب الجامعة، وضعت اللبنات الأولى لشغفي التقني. تعمقت في دراسة أنظمة التحكم الدقيقة، واستكشفت الإمكانيات الواسعة للأنظمة المدمجة وتطبيقات الذكاء الاصطناعي. توجت هذه المسيرة بمشروع تخرج طموح يهدف إلى توظيف نماذج اللغة الكبيرة (LLMs) لتطوير حلول مبتكرة في مجال الصيانة التنبؤية، مما يعكس التزامي بتطبيق أحدث التقنيات لمواجهة التحديات الواقعية.",
+          "icon": "graduation-cap"
+        },
+        {
+          "type": "experience",
+          "period": "يوليو 2024 – أغسطس 2024",
+          "heading": "مهندس إنترنت الأشياء ومطور حلول",
+          "subheading": "شركة سراج المعرفة, البصرة",
+          "description": "خلال هذه التجربة، قمت بتحويل المفاهيم النظرية إلى حلول عملية ملموسة. صممت وطورت نظام تحكم صناعي متكامل، مزودًا بواجهة مستخدم رسومية (GUI) تفاعلية باستخدام KivyMD. هذا النظام لم يسهل فقط عمليات المراقبة والتحكم، بل قدم أيضًا رؤية مبتكرة لإدارة العمليات الصناعية بكفاءة ومرونة.",
+          "icon": "briefcase"
+        },
+        {
+          "type": "experience",
+          "period": "يوليو 2023 – أغسطس 2024",
+          "heading": "أخصائي دعم فني للأجهزة الصناعية",
+          "subheading": "شركة العالم الرقمي, البصرة",
+          "description": "توليت مسؤولية تشخيص وإصلاح الأعطال في مجموعة متنوعة من الأجهزة الصناعية الحساسة. عملت على ضمان استمرارية العمليات الإنتاجية لعملائنا من خلال تقديم دعم فني سريع وفعال، وتطبيق حلول صيانة وقائية لتقليل الأعطال المستقبلية. هذه التجربة صقلت مهاراتي في حل المشكلات تحت الضغط.",
+          "icon": "tools"
+        },
+        {
+          "type": "experience",
+          "period": "فترات تدريبية متنوعة",
+          "heading": "مهندس SCADA & DCS (تدريب ميداني)",
+          "subheading": "قطاع النفط والكهرباء, البصرة",
+          "description": "خلال فترات التدريب الميداني في قطاعي النفط والكهرباء، انغمست في بيئات العمل الصناعية الحقيقية. اكتسبت خبرة عملية في معايرة أجهزة القياس والتحكم الدقيقة، وشاركت في تصميم وتطوير واجهات مراقبة (HMI) لأنظمة SCADA و DCS، مما عزز فهمي العميق لمتطلبات التحكم الصناعي وأفضل الممارسات.",
+          "icon": "industry"
+        },
+        {
+          "type": "experience",
+          "period": "2019 – حتى الآن",
+          "heading": "خبير صيانة سيارات (عمل حر)",
+          "subheading": "مستقل, البصرة",
+          "description": "على مدار أكثر من أربع سنوات، كرست وقتي لدراسة وفهم تعقيدات الأنظمة الميكانيكية والكهربائية في السيارات. هذه الخبرة العملية المستقلة مكنتني من تطوير قدرات تحليلية قوية في تشخيص الأعطال بدقة، وابتكار حلول فعالة ومستدامة لمجموعة واسعة من التحديات التقنية.",
+          "icon": "car"
+        }
+      ]
+    },
+    "my_toolkit": {
+      "title": "المهارات التقنية",
+      "intro_text": "مجموعة متكاملة من التقنيات والمهارات التي أتقنها وأوظفها بفعالية لتحويل الأفكار إلى مشاريع ناجحة ومبتكرة:",
+      "categories": [
+        {
+          "name": "الأتمتة وإنترنت الأشياء الصناعي (IIoT)",
+          "icon": "cogs",
+          "description": "أمتلك خبرة في تصميم وتنفيذ حلول أتمتة صناعية شاملة تربط بين الأنظمة المادية والرقمية. أركز على تحسين كفاءة العمليات، تمكين اتخاذ القرارات المستندة إلى البيانات، وتطوير بنى تحتية ذكية للمصانع والمنشآت الصناعية، مع مراعاة قابلية التوسع والأمان.",
+          "skills": [
+            {"name": "تصميم حلول IIoT متكاملة", "level_percentage": 90, "details": "بناء أنظمة مترابطة من المستشعرات الطرفية وحتى منصات التحليل السحابية، مع التركيز على جمع البيانات ومعالجتها بكفاءة."},
+            {"name": "أنظمة SCADA/DCS المتقدمة", "level_percentage": 85, "details": "تطوير وتهيئة أنظمة المراقبة والتحكم المركزية (SCADA) والأنظمة الموزعة (DCS) للعمليات الصناعية المعقدة، بما في ذلك تصميم واجهات HMI فعالة."},
+            {"name": "برمجة PLC (Ladder, FBD, ST, SCL)", "level_percentage": 95, "details": "إتقان برمجة وحدات التحكم المنطقية القابلة للبرمجة (PLC) باستخدام لغات متعددة (Ladder Diagram, Function Block Diagram, Structured Text, Sequential Function Chart) لمختلف العلامات التجارية مثل Siemens و Allen-Bradley."},
+            {"name": "بروتوكولات صناعية (Modbus, Profibus, Ethernet/IP, OPC UA)", "level_percentage": 80, "details": "ضمان التواصل الموثوق والسلس بين مختلف الأجهزة والمكونات الصناعية عبر فهم وتطبيق بروتوكولات الاتصال القياسية والحديثة."}
+          ]
+        },
+        {
+          "name": "الأنظمة المدمجة وتصميم الأجهزة",
+          "icon": "microchip",
+          "description": "أقوم بتصميم وتطوير الأنظمة المدمجة التي تشكل العقل الإلكتروني للأجهزة الذكية. أتبع منهجية تطوير شاملة تبدأ من تحديد المتطلبات وتحليلها، مرورًا بتصميم الدوائر واختيار المكونات، وصولًا إلى بناء النماذج الأولية واختبارها، مع التركيز الدائم على تحقيق الأداء الأمثل والموثوقية العالية.",
+          "skills": [
+            {"name": "منصات تطوير (ESP32, Raspberry Pi, Arduino, STM32)", "level_percentage": 95, "details": "خبرة واسعة في استخدام منصات تطوير متنوعة ومرنة، مما يمكنني من اختيار الأنسب لكل مشروع بناءً على متطلبات الأداء والتكلفة."},
+            {"name": "معالجات ARM الدقيقة (Cortex-M, Cortex-A)", "level_percentage": 75, "details": "فهم جيد لبنى معالجات ARM الدقيقة والقدرة على تطوير برامج ثابتة (firmware) فعالة ومحسنة لها."},
+            {"name": "تصميم الدوائر الإلكترونية (PCB) والنماذج الأولية", "level_percentage": 85, "details": "مهارة في استخدام أدوات تصميم الدوائر المطبوعة (مثل Altium, KiCad) لتحويل المخططات النظرية إلى نماذج أولية عملية وقابلة للاختبار والإنتاج."}
+          ]
+        },
+        {
+          "name": "تطوير البرمجيات والذكاء الاصطناعي",
+          "icon": "brain",
+          "description": "أطور برمجيات قوية وفعالة تبث الحياة في الأنظمة الذكية. أطبق أحدث تقنيات الذكاء الاصطناعي وتعلم الآلة لاستخلاص رؤى قيمة من البيانات، أتمتة المهام المعقدة، وبناء تطبيقات قادرة على التعلم والتكيف. أركز على تطوير حلول AI عملية وقابلة للتطبيق في سياقات متنوعة.",
+          "skills": [
+            {"name": "Python (Kivy, NumPy, Pandas, OpenCV, TensorFlow, PyTorch, Scikit-learn)", "level_percentage": 90, "details": "إتقان لغة بايثون ومجموعة واسعة من مكتباتها القوية المستخدمة في تطوير واجهات المستخدم، تحليل البيانات، معالجة الصور، وبناء نماذج تعلم الآلة والتعلم العميق."},
+            {"name": "تطبيقات نماذج اللغة الكبيرة (LLMs) ومعالجة اللغة الطبيعية (NLP)", "level_percentage": 80, "details": "خبرة في استغلال إمكانيات نماذج اللغة الكبيرة وتطبيق تقنيات معالجة اللغة الطبيعية لتطوير تطبيقات ذكية تتفاعل مع المستخدمين وتفهم احتياجاتهم."},
+            {"name": "هندسة الأوامر (Prompt Engineering) والضبط الدقيق للنماذج (Fine-Tuning)", "level_percentage": 70, "details": "مهارة في صياغة الأوامر الفعالة لـ LLMs وضبطها بدقة لتحسين أدائها في مهام محددة، مما يضمن الحصول على أفضل النتائج الممكنة."}
+          ]
+        },
+        {
+          "name": "تطوير الويب وتجارب المستخدم",
+          "icon": "code-branch",
+          "description": "أصمم وأطور واجهات مستخدم رقمية (UI) وتجارب مستخدم (UX) تركز على الجاذبية البصرية وسهولة الاستخدام. أهدف إلى إنشاء جسور فعالة تربط المستخدمين بالوظائف الأساسية للتطبيقات والمواقع بسلاسة وبديهية، مما يعزز رضا المستخدم ويحقق أهداف المشروع.",
+          "skills": [
+            {"name": "HTML5, CSS3 (Sass, Tailwind CSS, Bootstrap)", "level_percentage": 90, "details": "إتقان لغات بناء الويب الأساسية مع خبرة في استخدام معالجات CSS وأطر العمل الحديثة لتسريع عملية التطوير وإنشاء تصميمات متجاوبة."},
+            {"name": "JavaScript (ES6+, Vue.js, React - أساسيات)", "level_percentage": 85, "details": "قدرة قوية على إضافة التفاعلية والديناميكية لتجارب الويب باستخدام JavaScript الحديثة، مع خبرة جيدة في Vue.js ومعرفة بأساسيات React."},
+            {"name": "Firebase ومنصات Backend-as-a-Service (BaaS)", "level_percentage": 75, "details": "استخدام Firebase وغيرها من منصات BaaS لتوفير حلول خلفية سريعة ومرنة وقابلة للتطوير، بما في ذلك المصادقة وقواعد البيانات والتخزين."},
+            {"name": "تصميم واجهات وتجارب المستخدم (Figma, Adobe XD, KivyMD)", "level_percentage": 80, "details": "مهارة في استخدام أدوات التصميم لإنشاء نماذج أولية تفاعلية وتصميمات مرئية جذابة، مع التركيز على مبادئ تجربة المستخدم لضمان سهولة الاستخدام."}
+          ]
+        },
+        {
+          "name": "الهندسة والتصميم بمساعدة الحاسوب",
+          "icon": "drafting-compass",
+          "description": "أستخدم مجموعة من الأدوات الرقمية المتقدمة في مجال التصميم بمساعدة الحاسوب (CAD) والمحاكاة الهندسية. هذا يمكنني من تصميم ونمذجة وتحليل الأنظمة الميكانيكية والإلكترونية بدقة وكفاءة عالية، مما يساهم في تقليل الأخطاء وتسريع دورة التطوير.",
+          "skills": [
+            {"name": "AutoCAD, Fusion 360, SolidWorks (أساسيات) للتصميم ثلاثي الأبعاد", "level_percentage": 85, "details": "خبرة قوية في استخدام برامج التصميم ثلاثي الأبعاد لإنشاء نماذج دقيقة للمنتجات، المكونات، والهياكل الميكانيكية."},
+            {"name": "MATLAB/Simulink للنمذجة والمحاكاة الديناميكية", "level_percentage": 70, "details": "استخدام MATLAB و Simulink لتحليل سلوك الأنظمة الديناميكية، اختبار خوارزميات التحكم، وتطوير نماذج رياضية للأنظمة المعقدة."},
+            {"name": "برامج محاكاة (Factory I/O, Multisim, Proteus, Wokwi)", "level_percentage": 80, "details": "إتقان استخدام برامج محاكاة متنوعة لإنشاء بيئات افتراضية لاختبار وتصحيح أخطاء أنظمة التحكم الصناعية، الدوائر الإلكترونية، والبرامج الثابتة قبل التنفيذ الفعلي."}
+          ]
+        }
+      ]
+    },
+    "recognitions": {
+        "title": "اللغات والشهادات",
+        "languages_intro": "أجيد التواصل بفعالية بلغات متعددة، مما يمكنني من العمل بكفاءة في بيئات متنوعة:",
+        "languages": [
+          { "language": "العربية", "proficiency": "لغة أم بطلاقة تامة", "level_percentage": 100 },
+          { "language": "الإنجليزية", "proficiency": "مستوى احترافي متقدم (تقني وتطبيقي)", "level_percentage": 95 }
+        ],
+        "certificates_intro": "شهادات مهنية تعزز خبراتي وتؤكد التزامي بالتفوق واكتساب أحدث المعارف في مجالي:",
+        "certificates": [
+          { "name": "النمو مع الذكاء الاصطناعي (جوجل/زين)", "date": "ديسمبر 2024", "issuer_icon": "google", "description": "برنامج مكثف ركز على تطبيقات الذكاء الاصطناعي في نمو الأعمال والابتكار، وكيفية استخدام أدوات Google AI لتطوير حلول ذكية.", "file": "certificates/google_ai_growth.pdf" },
+          { "name": "أساسيات لغة C++ (سولوليرن)", "date": "نوفمبر 2024", "issuer_icon": "sololearn", "description": "شهادة تغطي المفاهيم الأساسية للغة C++، بما في ذلك هياكل البيانات، والبرمجة الشيئية، وإدارة الذاكرة، مما يوفر أساسًا متينًا لتطوير البرمجيات عالية الأداء.", "file": "certificates/sololearn_cpp_fundamentals.pdf" },
+          { "name": "بايثون متقدم (سولوليرن)", "date": "نوفمبر 2024", "issuer_icon": "sololearn", "description": "تعميق المعرفة بلغة بايثون، واستكشاف مواضيع متقدمة مثل المولدات، والمزخرفات، والبرمجة الوظيفية، وتطبيقاتها في تحليل البيانات وتطوير الويب.", "file": "certificates/sololearn_python_advanced.pdf" },
+          { "name": "أساسيات إنترنت الأشياء (معرفة)", "date": "يونيو 2022", "issuer_icon": "maarifa", "description": "مقدمة شاملة لمفاهيم إنترنت الأشياء، بما في ذلك البروتوكولات، والمنصات، والتطبيقات العملية في مختلف القطاعات.", "file": "certificates/maarifa_iot_fundamentals.pdf" },
+          { "name": "تطوير تطبيقات الويب (ويبي)", "date": "سبتمبر 2023", "issuer_icon": "webe", "description": "دورة تدريبية عملية حول تطوير تطبيقات الويب الحديثة باستخدام HTML، CSS، JavaScript، مع التركيز على بناء واجهات مستخدم تفاعلية وجذابة.", "file": "certificates/webe_web_development.pdf" },
+          { "name": "أساسيات الأردوينو (إدراك)", "date": "ديسمبر 2021", "issuer_icon": "edraak", "description": "تعلم أساسيات العمل مع منصة أردوينو، بما في ذلك برمجة المتحكمات الدقيقة، وتوصيل المستشعرات والمشغلات، لبناء مشاريع إلكترونية تفاعلية.", "file": "certificates/edraak_arduino_essentials.pdf" }
+        ]
+    },
+    "ui_text": {
+        "nav_home": "الرئيسية",
+        "nav_journey": "الخبرات",
+        "nav_toolkit": "المهارات",
+        "nav_portfolio": "المشاريع",
+        "nav_recognitions": "الشهادات",
+        "nav_contact": "تواصل معي",
+        "theme_toggle_dark": "ثيم داكن",
+        "theme_toggle_light": "ثيم فاتح",
+        "hero_greeting": "أهلاً بك، أنا",
+        "hero_i_am": "أنا ",
+        "hero_cta": "اكتشف المزيد",
+        "journey_section_title": "الخبرات والمشاريع السابقة",
+        "toolkit_section_title": "المهارات التقنية",
+        "recognitions_section_title": "اللغات والشهادات",
+        "portfolio_section_title": "أبرز المشاريع",
+        "contact_section_title": "لنتعاون في تحقيق رؤيتك لمشروعك القادم!",
+        "contact_name_placeholder": "اسمك الكريم",
+        "contact_email_placeholder": "بريدك الإلكتروني للرد",
+        "contact_message_placeholder": "أخبرني عن فكرتك أو استفسارك...",
+        "contact_send_button": "أرسل الآن!",
+        "contact_my_linkedin": "تواصل معي على لينكدإن",
+        "footer_copyright": " حسين فاضل. جميع الحقوق محفوظة.",
+        "error_loading_data": "عفواً، حدث خطأ أثناء تحميل البيانات. الرجاء المحاولة لاحقاً.",
+        "contact_form_submitted": "شكراً لك! رسالتك في طريقها إليّ. سأقوم بالرد في أقرب وقت.",
+        "sample_3d_element": "نموذج ثلاثي الأبعاد متقدم...",
+        "language_toggle_en": "English",
+        "language_toggle_ar": "العربية",
+        "hero_i_am_specialized_in": "متخصص في",
+        "hero_i_master": "أصنع بـ",
+        "hero_generic_skill": "مطور حلول تقنية شاملة.",
+        "page_title": "حسين فاضل | معرض الأعمال والخبرات",
+        "download_cv_button": "تحميل السيرة الذاتية (PDF)",
+        "download_certificate_button": "تحميل الشهادة"
+    }
+  },
+  "en": {
+    "about_me": {
+      "name": "Hussein Fadhel",
+      "title": "Technology Solutions Developer specializing in Automation & IoT.",
+      "profile_image": "img/me.jpg",
+      "tagline": "Translating innovative ideas into tangible realities, code by code, solution by solution.",
+      "introduction": "A dedicated technology engineer, I possess a strong passion for transforming complex challenges into practical and intelligent solutions. My career in technology is a continuous journey of innovation and development, where I integrate deep engineering expertise with a strategic design vision to deliver impactful results. I believe every project is an opportunity to demonstrate capabilities and achieve new milestones.",
+      "contact_details": {
+        "email": "hussein.alali80163@gmail.com",
+        "phone": "07830117210",
+        "linkedin": "hussein-fadhel-ahmed",
+        "address": "Basra, Iraq"
+      }
+    },
+    "my_journey": {
+      "title": "Experience & Projects",
+      "intro": "Each milestone in my professional journey represents a significant addition to my expertise, enhancing my ability to tackle challenges and achieve objectives with high efficiency.",
+      "timeline": [
+        {
+          "type": "education",
+          "period": "2021 – 2025 (Expected)",
+          "heading": "B.Sc. in Control & Automation Engineering Technology",
+          "subheading": "Southern Technical University, Basra",
+          "description": "At university, I laid the initial groundwork for my technical passion. I delved deep into the study of precise control systems and explored the vast potential of embedded systems and AI applications. This journey culminated in an ambitious graduation project aimed at leveraging Large Language Models (LLMs) to develop innovative solutions for predictive maintenance, reflecting my commitment to applying cutting-edge technologies to real-world challenges.",
+          "icon": "graduation-cap"
+        },
+        {
+          "type": "experience",
+          "period": "July 2024 – August 2024",
+          "heading": "IoT Engineer & Solutions Developer",
+          "subheading": "Siraj Al-Maarefa Company, Basra",
+          "description": "During this experience, I transformed theoretical concepts into tangible, practical solutions. I designed and developed an integrated industrial control system, complete with an interactive Graphical User Interface (GUI) using KivyMD. This system not only facilitated monitoring and control operations but also introduced an innovative approach to managing industrial processes with efficiency and flexibility.",
+          "icon": "briefcase"
+        },
+        {
+          "type": "experience",
+          "period": "July 2023 – August 2024",
+          "heading": "Technical Support Specialist for Industrial Devices",
+          "subheading": "Digital World Company, Basra",
+          "description": "I took on the responsibility of diagnosing and repairing faults in a variety of sensitive industrial devices. I worked to ensure the continuity of our clients' production operations by providing prompt and effective technical support, and implementing preventive maintenance solutions to minimize future downtime. This experience honed my problem-solving skills under pressure.",
+          "icon": "tools"
+        },
+        {
+          "type": "experience",
+          "period": "Various Training Periods",
+          "heading": "SCADA & DCS Engineer (Field Training)",
+          "subheading": "Oil & Electricity Sector, Basra",
+          "description": "During field training in the oil and electricity sectors, I immersed myself in real-world industrial environments. I gained hands-on experience in calibrating precise measurement and control instruments and participated in designing and developing Human-Machine Interfaces (HMIs) for SCADA and DCS systems, thereby deepening my understanding of industrial control requirements and best practices.",
+          "icon": "industry"
+        },
+        {
+          "type": "experience",
+          "period": "2019 – Present",
+          "heading": "Automotive Maintenance Expert (Freelance)",
+          "subheading": "Independent, Basra",
+          "description": "For over four years, I dedicated my time to studying and understanding the complexities of automotive mechanical and electrical systems. This independent, hands-on experience enabled me to develop strong analytical capabilities in accurately diagnosing faults and devising effective, sustainable solutions for a wide range of technical challenges.",
+          "icon": "car"
+        }
+      ]
+    },
+    "my_toolkit": {
+      "title": "Technical Skills",
+      "intro_text": "A comprehensive suite of technologies and skills that I master and effectively employ to transform ideas into successful and innovative projects:",
+      "categories": [
+        {
+          "name": "Automation & Industrial IoT (IIoT)",
+          "icon": "cogs",
+          "description": "I possess expertise in designing and implementing comprehensive industrial automation solutions that bridge physical and digital systems. I focus on enhancing operational efficiency, enabling data-driven decision-making, and developing smart infrastructures for factories and industrial facilities, always considering scalability and security.",
+          "skills": [
+            {"name": "End-to-End IIoT Solution Design", "level_percentage": 90, "details": "Building interconnected systems from edge sensors to cloud analytics platforms, with a focus on efficient data acquisition and processing."},
+            {"name": "Advanced SCADA/DCS Systems", "level_percentage": 85, "details": "Developing and configuring Supervisory Control and Data Acquisition (SCADA) and Distributed Control Systems (DCS) for complex industrial processes, including effective HMI design."},
+            {"name": "PLC Programming (Ladder, FBD, ST, SCL)", "level_percentage": 95, "details": "Proficiency in programming Programmable Logic Controllers (PLCs) using multiple languages (Ladder Diagram, Function Block Diagram, Structured Text, Sequential Function Chart) for various brands like Siemens and Allen-Bradley."},
+            {"name": "Industrial Protocols (Modbus, Profibus, Ethernet/IP, OPC UA)", "level_percentage": 80, "details": "Ensuring reliable and seamless communication between diverse industrial devices and components by understanding and applying standard and modern communication protocols."}
+          ]
+        },
+        {
+          "name": "Embedded Systems & Hardware Design",
+          "icon": "microchip",
+          "description": "I design and develop embedded systems that form the electronic core of smart devices. I follow a comprehensive development methodology, from requirements gathering and analysis, through circuit design and component selection, to prototype construction and testing, always focusing on optimal performance and high reliability.",
+          "skills": [
+            {"name": "Development Platforms (ESP32, Raspberry Pi, Arduino, STM32)", "level_percentage": 95, "details": "Extensive experience with various versatile development platforms, enabling me to select the most suitable for each project based on performance and cost requirements."},
+            {"name": "ARM Microcontrollers (Cortex-M, Cortex-A)", "level_percentage": 75, "details": "Good understanding of ARM microcontroller architectures and the ability to develop efficient and optimized firmware for them."},
+            {"name": "Electronic Circuit (PCB) Design & Prototyping", "level_percentage": 85, "details": "Skilled in using PCB design tools (like Altium, KiCad) to transform theoretical schematics into practical, testable, and producible prototypes."}
+          ]
+        },
+        {
+          "name": "Software Development & Artificial Intelligence",
+          "icon": "brain",
+          "description": "I develop robust and efficient software that brings intelligent systems to life. I apply the latest AI and machine learning techniques to extract valuable insights from data, automate complex tasks, and build applications capable of learning and adapting. I focus on developing practical and applicable AI solutions in diverse contexts.",
+          "skills": [
+            {"name": "Python (Kivy, NumPy, Pandas, OpenCV, TensorFlow, PyTorch, Scikit-learn)", "level_percentage": 90, "details": "Proficiency in Python and a wide array of its powerful libraries used for UI development, data analysis, image processing, and building machine learning and deep learning models."},
+            {"name": "Large Language Model (LLM) Applications & Natural Language Processing (NLP)", "level_percentage": 80, "details": "Experience in harnessing the capabilities of LLMs and applying NLP techniques to develop intelligent applications that interact with users and understand their needs."},
+            {"name": "Prompt Engineering & Model Fine-Tuning", "level_percentage": 70, "details": "Skilled in crafting effective prompts for LLMs and fine-tuning them to enhance their performance on specific tasks, ensuring the best possible outcomes."}
+          ]
+        },
+        {
+          "name": "Web Development & User Experience",
+          "icon": "code-branch",
+          "description": "I design and develop digital user interfaces (UI) and user experiences (UX) that prioritize visual appeal and ease of use. I aim to create effective bridges that connect users to the core functionalities of applications and websites smoothly and intuitively, enhancing user satisfaction and achieving project goals.",
+          "skills": [
+            {"name": "HTML5, CSS3 (Sass, Tailwind CSS, Bootstrap)", "level_percentage": 90, "details": "Mastery of fundamental web-building languages with experience in using CSS preprocessors and modern frameworks to accelerate development and create responsive designs."},
+            {"name": "JavaScript (ES6+, Vue.js, React - Basics)", "level_percentage": 85, "details": "Strong ability to add interactivity and dynamism to web experiences using modern JavaScript, with good experience in Vue.js and foundational knowledge of React."},
+            {"name": "Firebase & Backend-as-a-Service (BaaS) Platforms", "level_percentage": 75, "details": "Utilizing Firebase and other BaaS platforms to provide fast, flexible, and scalable backend solutions, including authentication, databases, and storage."},
+            {"name": "UI/UX Design (Figma, Adobe XD, KivyMD)", "level_percentage": 80, "details": "Skilled in using design tools to create interactive prototypes and visually appealing designs, with a focus on user experience principles to ensure ease of use."}
+          ]
+        },
+        {
+          "name": "CAD & Engineering Simulation",
+          "icon": "drafting-compass",
+          "description": "I employ a range of advanced digital tools in Computer-Aided Design (CAD) and engineering simulation. This enables me to design, model, and analyze mechanical and electronic systems with high precision and efficiency, contributing to error reduction and a faster development cycle.",
+          "skills": [
+            {"name": "AutoCAD, Fusion 360, SolidWorks (Basics) for 3D Design", "level_percentage": 85, "details": "Strong experience in using 3D design software to create accurate models of products, components, and mechanical structures."},
+            {"name": "MATLAB/Simulink for Dynamic Modeling & Simulation", "level_percentage": 70, "details": "Using MATLAB and Simulink to analyze the behavior of dynamic systems, test control algorithms, and develop mathematical models for complex systems."},
+            {"name": "Simulation Software (Factory I/O, Multisim, Proteus, Wokwi)", "level_percentage": 80, "details": "Proficiency in using various simulation programs to create virtual environments for testing and debugging industrial control systems, electronic circuits, and firmware before actual implementation."}
+          ]
+        }
+      ]
+    },
+     "recognitions": {
+        "title": "Languages & Certifications",
+        "languages_intro": "I communicate effectively in multiple languages, enabling me to work efficiently in diverse environments:",
+        "languages": [
+          { "language": "Arabic", "proficiency": "Native & Full Fluency", "level_percentage": 100 },
+          { "language": "English", "proficiency": "Advanced Professional Level (Technical & Applied)", "level_percentage": 95 }
+        ],
+        "certificates_intro": "Professional certifications that bolster my expertise and underscore my commitment to excellence and acquiring the latest knowledge in my field:",
+        "certificates": [
+          { "name": "Growth with AI (Google/Zain)", "date": "December 2024", "issuer_icon": "google", "description": "An intensive program focused on AI applications for business growth and innovation, and how to use Google AI tools to develop smart solutions.", "file": "certificates/google_ai_growth.pdf" },
+          { "name": "C++ Fundamentals (Sololearn)", "date": "November 2024", "issuer_icon": "sololearn", "description": "A certificate covering core C++ concepts, including data structures, object-oriented programming, and memory management, providing a solid foundation for high-performance software development.", "file": "certificates/sololearn_cpp_fundamentals.pdf" },
+          { "name": "Python Advanced (Sololearn)", "date": "November 2024", "issuer_icon": "sololearn", "description": "Deepened Python knowledge, exploring advanced topics like generators, decorators, functional programming, and their applications in data analysis and web development.", "file": "certificates/sololearn_python_advanced.pdf" },
+          { "name": "IoT Fundamentals (Maarifa)", "date": "June 2022", "issuer_icon": "maarifa", "description": "A comprehensive introduction to Internet of Things concepts, including protocols, platforms, and practical applications across various sectors.", "file": "certificates/maarifa_iot_fundamentals.pdf" },
+          { "name": "Web Development (Webe)", "date": "September 2023", "issuer_icon": "webe", "description": "A hands-on training course on modern web application development using HTML, CSS, JavaScript, with a focus on building interactive and engaging user interfaces.", "file": "certificates/webe_web_development.pdf" },
+          { "name": "Arduino Essentials (Edraak)", "date": "December 2021", "issuer_icon": "edraak", "description": "Learned the fundamentals of working with the Arduino platform, including microcontroller programming, connecting sensors and actuators, to build interactive electronic projects.", "file": "certificates/edraak_arduino_essentials.pdf" }
+        ]
+    },
+    "ui_text": {
+        "nav_home": "Home",
+        "nav_journey": "Experience",
+        "nav_toolkit": "Skills",
+        "nav_portfolio": "Projects",
+        "nav_recognitions": "Certifications",
+        "nav_contact": "Connect",
+        "theme_toggle_dark": "Dark Theme",
+        "theme_toggle_light": "Light Theme",
+        "hero_greeting": "Hello, I'm",
+        "hero_i_am": "I am ",
+        "hero_cta": "Discover More",
+        "journey_section_title": "Past Experience & Projects",
+        "toolkit_section_title": "Technical Skills",
+        "recognitions_section_title": "Languages & Certifications",
+        "portfolio_section_title": "Featured Projects",
+        "contact_section_title": "Let's collaborate to realize the vision for your next project!",
+        "contact_name_placeholder": "Your Esteemed Name",
+        "contact_email_placeholder": "Your Email for My Reply",
+        "contact_message_placeholder": "Tell me about your idea or query...",
+        "contact_send_button": "Send Now!",
+        "contact_my_linkedin": "Connect with me on LinkedIn",
+        "footer_copyright": " Hussein Fadhel. All rights reserved.",
+        "error_loading_data": "Apologies, an error occurred while loading data. Please try again later.",
+        "contact_form_submitted": "Thank you! Your message is on its way. I'll get back to you soon.",
+        "sample_3d_element": "Advanced 3D Model Showcase...",
+        "language_toggle_en": "English",
+        "language_toggle_ar": "العربية",
+        "hero_i_am_specialized_in": "Specialized in",
+        "hero_i_master": "I craft with",
+        "hero_generic_skill": "Developer of comprehensive tech solutions.",
+        "page_title": "Hussein Fadhel | Portfolio & Experience",
+        "download_cv_button": "Download CV (PDF)",
+        "download_certificate_button": "Download Certificate"
+    }
+  }
+}

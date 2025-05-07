@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"> <!-- Default to Arabic -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="page_title">حسين فاضل | معرض الأعمال والابتكارات</title>
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body class="light-theme">
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/me.jpg" alt="Hussein Fadhel" id="personal-photo-nav">
+                <span id="nav-name" data-cv-key="about_me.name">حسين فاضل</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero" data-lang-key="nav_home">الرئيسية</a></li>
+                <li><a href="#journey-section" data-lang-key="nav_journey">رحلتي</a></li>
+                <li><a href="#toolkit-section" data-lang-key="nav_toolkit">أدواتي</a></li>
+                <li><a href="#portfolio-section" data-lang-key="nav_portfolio">إبداعاتي</a></li>
+                <li><a href="#recognitions-section" data-lang-key="nav_recognitions">اعترافات</a></li>
+                <li><a href="#contact-section" data-lang-key="nav_contact">تواصل معي</a></li>
+                <li>
+                    <div class="controls-in-nav">
+                        <button id="language-toggle-button" title="Switch Language">
+                            <i class="fas fa-globe"></i>
+                        </button>
+                        <button id="theme-toggle-button" title="Toggle Theme">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-theme icon-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-theme icon-sun" style="display:none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-image-container">
+                    <img src="img/me.jpg" alt="Hussein Fadhel" id="hero-personal-photo">
+                </div>
+                <div class="hero-text">
+                    <h1><span data-lang-key="hero_greeting">أهلاً بك، أنا</span> <span id="hero-name" data-cv-key="about_me.name"></span></h1>
+                    <p id="hero-title" data-cv-key="about_me.title"></p>
+                    <p class="typing-text-container">
+                        <span data-lang-key="hero_i_am">أنا</span> <span id="typing-text"></span><span class="cursor">|</span>
+                    </p>
+                    <p id="hero-tagline" data-cv-key="about_me.tagline"></p>
+                    <a href="#portfolio-section" class="cta-button" data-lang-key="hero_cta">اكتشف المزيد</a>
+                </div>
+                <div class="hero-3d-placeholder">
+                    <p data-lang-key="sample_3d_element">هنا يكمن الإبداع ثلاثي الأبعاد...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-me-intro" class="about-me-intro-section content-section">
+            <!-- Introduction from about_me will be dynamically inserted here by JS -->
+        </section>
+
+        <section id="journey-section" class="journey-section content-section">
+            <h2 data-lang-key="journey_section_title">محطات في رحلتي الإبداعية</h2>
+            <p class="section-intro" id="journey-intro"></p>
+            <div class="timeline-container">
+                <!-- Timeline items will be loaded here by JavaScript -->
+            </div>
+        </section>
+
+        <section id="toolkit-section" class="toolkit-section content-section">
+            <h2 data-lang-key="toolkit_section_title">صندوق أدواتي الإبداعية</h2>
+            <p class="section-intro" id="toolkit-intro"></p>
+            <div class="toolkit-grid">
+                <!-- Toolkit categories and skills will be loaded here by JavaScript -->
+            </div>
+        </section>
+
+        <section id="portfolio-section" class="portfolio-section content-section">
+            <h2 data-lang-key="portfolio_section_title">نافذة على إبداعاتي</h2>
+            <div id="portfolio-filters">
+                <!-- Optional: Filters for project categories -->
+            </div>
+            <div id="portfolio-grid" class="portfolio-grid">
+                <!-- Portfolio projects will be loaded here by JavaScript -->
+            </div>
+        </section>
+
+        <section id="recognitions-section" class="recognitions-section content-section">
+            <h2 data-lang-key="recognitions_section_title">لغات وشهادات</h2>
+            <div class="recognitions-content">
+                <div id="languages-showcase">
+                    <h3 id="languages-intro-text"></h3>
+                    <!-- Languages will be loaded here -->
+                </div>
+                <div id="certificates-showcase">
+                    <h3 id="certificates-intro-text"></h3>
+                    <!-- Certificates will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-section" class="contact-section content-section">
+            <h2 data-lang-key="contact_section_title">لنتحدث عن مشروعك القادم!</h2>
+            <form id="contact-form">
+                <input type="text" name="name" data-placeholder-lang-key="contact_name_placeholder" placeholder="اسمك الكريم" required>
+                <input type="email" name="email" data-placeholder-lang-key="contact_email_placeholder" placeholder="بريدك الإلكتروني للرد" required>
+                <textarea name="message" data-placeholder-lang-key="contact_message_placeholder" placeholder="أخبرني عن فكرتك أو استفسارك..." rows="5" required></textarea>
+                <button type="submit" data-lang-key="contact_send_button">أرسل الآن!</button>
+            </form>
+            <div id="contact-info-showcase">
+                <!-- Contact info from about_me.contact_details will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> <span data-cv-key="about_me.name">حسين فاضل</span></p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>http://192.168.0.138:3000

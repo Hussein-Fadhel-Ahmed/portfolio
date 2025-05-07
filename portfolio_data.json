@@ -1,0 +1,90 @@
+{
+  "ar": {
+    "projects_title": "مشاريعي",
+    "projects": [
+      {
+        "id": 1,
+        "title": "مشروع نموذجي ١: تطبيق ويب رائع",
+        "category": "تطوير الويب",
+        "image": "img/project1_thumbnail.jpg",
+        "video_url": null,
+        "description": "هذا وصف موجز للمشروع النموذجي الأول. يعرض المهارات في تقنيات الويب الحديثة والتصميم المتجاوب.",
+        "technologies": ["HTML", "CSS", "JavaScript", "Vue.js"],
+        "live_url": "#",
+        "source_code_url": "#",
+        "view_live_button": "مشاهدة مباشرة",
+        "view_source_button": "الكود المصدري"
+      },
+      {
+        "id": 2,
+        "title": "مشروع نموذجي ٢: حل إنترنت الأشياء",
+        "category": "إنترنت الأشياء",
+        "image": "img/project2_thumbnail.jpg",
+        "video_url": "https://www.youtube.com/embed/samplevideo",
+        "description": "وصف للمشروع النموذجي الثاني، وهو حل مبتكر لإنترنت الأشياء يوضح معالجة البيانات والتحكم في الوقت الفعلي.",
+        "technologies": ["ESP32", "Python", "Firebase", "MQTT"],
+        "live_url": null,
+        "source_code_url": "#",
+        "view_live_button": "مشاهدة مباشرة",
+        "view_source_button": "الكود المصدري"
+      },
+      {
+        "id": 3,
+        "title": "مشروع نموذجي ٣: نظام أتمتة",
+        "category": "الأتمتة",
+        "image": "img/project3_thumbnail.jpg",
+        "video_url": null,
+        "description": "تفاصيل حول المشروع النموذجي الثالث، مع التركيز على أنظمة الأتمتة والتحكم.",
+        "technologies": ["PLC", "SCADA", "HMI", "Modbus"],
+        "live_url": "#",
+        "source_code_url": "#",
+        "view_live_button": "مشاهدة مباشرة",
+        "view_source_button": "الكود المصدري"
+      }
+    ]
+  },
+  "en": {
+    "projects_title": "My Projects",
+    "projects": [
+      {
+        "id": 1,
+        "title": "Sample Project 1: Awesome Web App",
+        "category": "Web Development",
+        "image": "img/project1_thumbnail.jpg",
+        "video_url": null,
+        "description": "This is a brief description of Sample Project 1. It showcases skills in modern web technologies and responsive design.",
+        "technologies": ["HTML", "CSS", "JavaScript", "Vue.js"],
+        "live_url": "#",
+        "source_code_url": "#",
+        "view_live_button": "View Live",
+        "view_source_button": "Source Code"
+      },
+      {
+        "id": 2,
+        "title": "Sample Project 2: IoT Solution",
+        "category": "IoT",
+        "image": "img/project2_thumbnail.jpg",
+        "video_url": "https://www.youtube.com/embed/samplevideo",
+        "description": "A description for Sample Project 2, an innovative IoT solution demonstrating real-time data processing and control.",
+        "technologies": ["ESP32", "Python", "Firebase", "MQTT"],
+        "live_url": null,
+        "source_code_url": "#",
+        "view_live_button": "View Live",
+        "view_source_button": "Source Code"
+      },
+      {
+        "id": 3,
+        "title": "Sample Project 3: Automation System",
+        "category": "Automation",
+        "image": "img/project3_thumbnail.jpg",
+        "video_url": null,
+        "description": "Details about Sample Project 3, focusing on automation and control systems.",
+        "technologies": ["PLC", "SCADA", "HMI", "Modbus"],
+        "live_url": "#",
+        "source_code_url": "#",
+        "view_live_button": "View Live",
+        "view_source_button": "Source Code"
+      }
+    ]
+  }
+}
