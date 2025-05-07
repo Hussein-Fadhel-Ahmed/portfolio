@@ -1,0 +1,1094 @@
+/* General Styles & Variables - Inspired by x.ai & trae.ai aesthetics */
+:root {
+    /* Font Settings for Luxury Look */
+    --heading-weight: 600;
+    --heading-letter-spacing: 0.02em;
+    --body-letter-spacing: 0.01em;
+    /* Dark Theme (Primary) */
+    --primary-color-dark: #0A0A14; /* Even deeper base */
+    --secondary-color-dark: #101022; /* Base for cards, slightly lighter */
+    --accent-color-dark: #00F5D4; /* Vibrant Teal/Mint */
+    --accent-color-secondary-dark: #FF007A; /* Vibrant Pink/Magenta */
+    --text-color-dark: #E8E8EE; /* Slightly brighter light gray */
+    --text-color-muted-dark: #A8A8BE; /* Muted gray */
+    --card-background-dark: #14142A; /* Darker card background for depth */
+    --border-color-dark: #22223F; /* Subtle border */
+
+    /* Light Theme - Refined */
+    --primary-color-light: #F0F2F5; /* Slightly softer off-white, more premium */
+    --secondary-color-light: #FFFFFF; /* Pure white for cards/elevated surfaces */
+    --accent-color-light: #0056b3; /* Deeper, more sophisticated blue */
+    --accent-color-secondary-light: #C81E5A; /* Slightly muted, richer pink */
+    --text-color-light: #212529; /* Standard dark gray for strong readability */
+    --text-color-muted-light: #6C757D; /* Softer gray for muted text */
+    --card-background-light: #FFFFFF;
+    --border-color-light: #DEE2E6; /* Softer border color */
+
+    --font-family-sans-serif: 'Montserrat', 'Arial', sans-serif;
+    --font-family-arabic: 'Changa', 'Cairo', sans-serif; /* خطوط عربية قوية ورسمية */
+    --font-family-headings: 'Playfair Display', 'Georgia', serif;
+
+    --transition-speed: 0.4s;
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Softer shadow for light theme */
+    --card-hover-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); /* Softer hover shadow */
+    --border-radius-main: 8px; /* Slightly more subtle rounding */
+}
+
+/* Default to Dark Theme */
+body {
+    --primary-color-current: var(--primary-color-dark);
+    --secondary-color-current: var(--secondary-color-dark);
+    --accent-color-current: var(--accent-color-dark);
+    --accent-color-secondary-current: var(--accent-color-secondary-dark);
+    --text-color-current: var(--text-color-dark);
+    --text-color-muted-current: var(--text-color-muted-dark);
+    --card-background-current: var(--card-background-dark);
+    --border-color-current: var(--border-color-dark);
+    background-color: var(--primary-color-current);
+}
+
+body.light-theme {
+    --primary-color-current: var(--primary-color-light);
+    --secondary-color-current: var(--secondary-color-light);
+    --accent-color-current: var(--accent-color-light);
+    --accent-color-secondary-current: var(--accent-color-secondary-light);
+    --text-color-current: var(--text-color-light);
+    --text-color-muted-current: var(--text-color-muted-light);
+    --card-background-current: var(--card-background-light);
+    --border-color-current: var(--border-color-light);
+    background-color: var(--primary-color-current);
+}
+
+/* Import Google Fonts (Removed as we now load them in HTML) */
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Tajawal:wght@400;500;700&display=swap'); */
+
+body {
+    font-family: var(--font-family-sans-serif);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color-current);
+    line-height: 1.75; /* Increased for readability */
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: var(--body-letter-spacing);
+}
+
+html[dir="rtl"] body {
+    font-family: var(--font-family-arabic), var(--font-family-sans-serif);
+    letter-spacing: 0.005em; /* تعديل طفيف لتباعد الأحرف في النص العربي لتحسين القراءة والجمالية */
+}
+
+/* تطبيق الخطوط الإنجليزية الفاخرة */
+html[dir="ltr"] body {
+    font-family: var(--font-family-sans-serif);
+}
+
+html[dir="ltr"] h1, 
+html[dir="ltr"] h2, 
+html[dir="ltr"] h3, 
+html[dir="ltr"] h4, 
+html[dir="ltr"] h5, 
+html[dir="ltr"] h6 {
+    font-family: var(--font-family-headings);
+    font-weight: var(--heading-weight);
+    letter-spacing: var(--heading-letter-spacing);
+}
+
+/* تطبيق الخطوط العربية الفاخرة للعناوين */
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6 {
+    font-family: var(--font-family-arabic); /* استخدام الخط العربي الرئيسي للعناوين */
+    font-weight: var(--heading-weight); /* استخدام متغير وزن خط العناوين الحالي */
+    letter-spacing: 0.01em; /* تعديل تباعد الأحرف بشكل طفيف للعناوين العربية */
+}
+
+/* تعديلات خاصة لـ h1 و h2 بالعربية إذا لزم الأمر */
+html[dir="rtl"] h1 {
+    font-weight: 700; /* ضمان وزن خط قوي */
+    /* letter-spacing: 0; يمكن تعديل تباعد الأحرف هنا إذا لزم الأمر */
+}
+html[dir="rtl"] h2 {
+    font-weight: 600; /* ضمان وزن خط قوي */
+    /* letter-spacing: 0; يمكن تعديل تباعد الأحرف هنا إذا لزم الأمر */
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: inherit; color: var(--text-color-current); font-weight: 700; margin-top: 0; margin-bottom: 1.2rem; }
+h1 { font-size: 3.2rem; font-weight: 900; letter-spacing: -0.02em;}
+html[dir="ltr"] h1 { font-weight: 700; letter-spacing: 0.02em; line-height: 1.2; }
+h2 { font-size: 2.6rem; font-weight: 700; margin-bottom: 3rem; text-align: center; position: relative; letter-spacing: -0.01em;}
+html[dir="ltr"] h2 { font-weight: 600; letter-spacing: 0.02em; line-height: 1.3; }
+h2::after {
+    content: ''; display: block; width: 70px; height: 5px;
+    background: linear-gradient(90deg, var(--accent-color-current), var(--accent-color-secondary-current));
+    margin: 1rem auto 0; border-radius: 3px;
+}
+h3 { font-size: 1.6rem; }
+a { color: var(--accent-color-current); text-decoration: none; transition: color var(--transition-speed) ease, opacity 0.2s ease; }
+a:hover { color: var(--accent-color-secondary-current); opacity: 0.85; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* Header & Navigation - Modernized */
+header {
+    background-color: rgba(var(--primary-color-dark-rgb, 10, 10, 20), 0.75); /* Using RGB for opacity */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* Softer shadow for header */
+    padding: 1.2rem 6%; position: sticky; top: 0; z-index: 1000; /* Increased padding */
+    border-bottom: 1px solid var(--border-color-current);
+}
+body.light-theme header {
+    background-color: rgba(var(--primary-color-light-rgb, 240, 242, 245), 0.9); /* Match new primary light */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+nav { display: flex; justify-content: space-between; align-items: center; }
+nav .logo { display: flex; align-items: center; } /* Added for flex layout */
+nav .logo img#personal-photo-nav {
+    width: 50px; height: 50px; border-radius: 50%;
+    border: 2px solid var(--accent-color-current);
+}
+html[dir="rtl"] nav .logo img#personal-photo-nav { margin-left: 15px; }
+html[dir="ltr"] nav .logo img#personal-photo-nav { margin-right: 15px; }
+nav .logo #nav-name { font-size: 1.8rem; font-weight: 700; color: var(--text-color-current); }
+.nav-links { list-style: none; display: flex; margin: 0; padding: 0; }
+.nav-links li { margin: 0 12px; display: flex; align-items: center; } /* Increased spacing & flex alignment */
+.nav-links a { font-weight: 500; padding: 0.6rem 0.3rem; display: block; font-size: 1.05rem; color: var(--text-color-muted-current); position: relative; }
+.nav-links a::after { /* Subtle underline hover effect */
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--accent-color-current);
+    transition: width 0.3s ease;
+}
+.nav-links a:hover::after, .nav-links a.active::after {
+    width: 70%;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--accent-color-current); }
+.controls { display: flex; align-items: center; gap: 12px; }
+.controls button, .nav-links .controls-in-nav button {
+    background-color: transparent; 
+    color: var(--text-color-muted-current);
+    border: none;
+    padding: 0.6rem 0.4rem; /* Adjusted padding for vertical alignment with nav links */
+    border-radius: var(--border-radius-main); 
+    cursor: pointer; 
+    font-size: 0.9rem;
+    line-height: 1; /* Align icon properly if any */
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease, transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+.controls button:hover, .nav-links .controls-in-nav button:hover {
+    background-color: var(--accent-color-current); 
+    color: var(--primary-color-dark); 
+    border: none;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 4px 10px color-mix(in srgb, var(--accent-color-current) 25%, transparent);
+}
+body.light-theme .controls button:hover, body.light-theme .nav-links .controls-in-nav button:hover { 
+    color: var(--primary-color-light); 
+    /* Ensure dark theme hover text is appropriate if accent-color-dark is light */
+}
+body:not(.light-theme) .controls button:hover, body:not(.light-theme) .nav-links .controls-in-nav button:hover {
+    /* Override for very light accents in dark mode.
+       If --accent-color-current (derived from --accent-color-dark) is a light color,
+       this ensures high contrast for text. The general .controls button:hover
+       already sets color to var(--primary-color-dark). This rule provides a
+       more specific override if that's not suitable (e.g. accent is very light). */
+    color: #0A0A14; /* Explicitly dark for light accents in dark mode */
+}
+/* Consistent Icon Sizing for Nav Controls */
+#language-toggle-button .fas,
+#theme-toggle-button .icon-theme {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1; /* Prevents extra space from line height */
+}
+
+#language-toggle-button .fas {
+    font-size: 1.4rem; /* Unified size */
+}
+
+#theme-toggle-button .icon-theme {
+    width: 1.4rem;     /* Unified size */
+    height: 1.4rem;    /* Unified size */
+}
+.burger { display: none; cursor: pointer; }
+.burger div { 
+    width: 28px; 
+    height: 3px; 
+    background-color: var(--text-color-current); 
+    margin: 6px; 
+    transition: all 0.3s ease; 
+    border-radius: 2px;
+}
+
+/* تحسين حركة قائمة البرجر */
+.toggle .line1 { transform: rotate(-45deg) translate(-5px,6px); }
+.toggle .line2 { opacity: 0; }
+.toggle .line3 { transform: rotate(45deg) translate(-5px,-6px); }
+
+/* زر العودة إلى الأعلى */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--accent-color-current), var(--accent-color-secondary-current));
+    color: var(--primary-color-dark);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 99;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+html[dir="rtl"] .scroll-to-top {
+    right: auto;
+    left: 20px;
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top i {
+    font-size: 1.2rem;
+}
+
+body.light-theme .scroll-to-top {
+    color: var(--primary-color-light);
+}
+
+/* Hero Section - x.ai/trae.ai Inspired */
+.hero-section {
+    min-height: 95vh; display: flex; align-items: center; justify-content: center; /* Slightly less than full for breathing room */
+    padding: 5rem 6%; position: relative; overflow: hidden; /* Increased padding */
+    background-color: var(--primary-color-current);
+}
+#hero-particle-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Behind hero content */
+    pointer-events: none; /* Allow clicks to pass through */
+}
+.hero-content {
+    display: grid; grid-template-columns: auto 1fr; /* Keep structure */
+    align-items: center; gap: 5rem; max-width: 1350px; width: 100%; /* Increased gap and max-width */
+    color: var(--text-color-current);
+    position: relative; /* To ensure content is above canvas */
+    z-index: 1;
+}
+html[dir="rtl"] .hero-content { grid-template-columns: 1fr auto; }
+.hero-image-container { display: flex; justify-content: center; align-items: center; }
+html[dir="rtl"] .hero-image-container { order: 2; }
+#hero-personal-photo {
+    width: 320px; height: 320px; border-radius: 50%; object-fit: cover; /* Slightly larger */
+    border: 6px solid var(--accent-color-current);
+    box-shadow: 0 0 45px color-mix(in srgb, var(--accent-color-current) 30%, transparent); /* Softer glow */
+}
+body.light-theme #hero-personal-photo {
+    box-shadow: 0 5px 25px rgba(0, 86, 179, 0.2); /* More subtle shadow for light theme */
+}
+.hero-text { text-align: left; }
+html[dir="rtl"] .hero-text { text-align: right; order: 1; }
+.hero-text h1 { font-size: 4rem; margin-bottom: 1rem; color: var(--text-color-current); line-height: 1.2; } /* Larger, more spacing */
+.hero-text #hero-title { font-size: 1.8rem; color: var(--accent-color-current); margin-bottom: 1.5rem; font-weight: 500; }
+.hero-text .typing-text-container { font-size: 1.5rem; color: var(--text-color-muted-current); margin-bottom: 2rem; min-height: 2.5rem; }
+.typing-text-container .cursor { background-color: var(--accent-color-current); width: 3px; animation: blink 1s step-end infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.hero-text #hero-tagline { font-size: 1.2rem; margin-bottom: 3rem; color: var(--text-color-muted-current); line-height: 1.8; }
+.cta-button, .hero-text .download-cv-button { /* Grouping for shared base styles */
+    background: linear-gradient(90deg, var(--accent-color-current), var(--accent-color-secondary-current));
+    color: var(--primary-color-dark) !important;
+    padding: 1.1rem 2.8rem; border-radius: var(--border-radius-main); font-weight: bold; /* Bolder */
+    text-transform: uppercase; letter-spacing: 0.06em;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, background-position 0.5s ease;
+    display: inline-block;
+    border: none;
+    background-size: 200% auto; /* For hover effect */
+}
+body.light-theme .cta-button, body.light-theme .hero-text .download-cv-button {
+    color: var(--primary-color-light) !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for light theme buttons */
+}
+.cta-button:hover, .hero-text .download-cv-button:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 12px 30px color-mix(in srgb, var(--accent-color-current) 20%, transparent);
+    background-position: right center; /* Change gradient direction on hover */
+}
+.hero-text .download-cv-button {
+    margin-top: 1.5rem;
+    margin-inline-start: 1rem; /* Space between buttons if on same line */
+}
+.hero-3d-placeholder { display: none; }
+
+/* Content Sections General Styling */
+.content-section { padding: 6rem 6%; border-bottom: 1px solid var(--border-color-current); } /* Increased padding */
+.content-section:last-of-type { border-bottom: none; }
+.section-intro { text-align: center; max-width: 800px; margin: 0 auto 3.5rem auto; font-size: 1.2rem; color: var(--text-color-muted-current); line-height: 1.85;} /* Larger intro */
+
+/* About Me Intro Section */
+.about-me-intro-section {
+    text-align: center;
+    background-color: var(--secondary-color-current);
+    padding-top: 4rem; padding-bottom: 4rem; /* More vertical padding */
+}
+body.light-theme .about-me-intro-section {
+    background-color: #FDFEFF; /* Slightly off-white for light theme section */
+}
+.about-me-intro-section h2 { color: var(--text-color-current); font-size: 2.4rem; margin-bottom: 1rem; }
+.about-me-intro-section .tagline { font-size: 1.5rem; color: var(--accent-color-current); font-style: normal; font-weight: 500; margin-bottom: 2rem; }
+.about-me-intro-section p:not(.tagline) { max-width: 900px; margin: 0 auto 2rem auto; line-height: 2; font-size: 1.15rem; }
+
+/* Journey Section - Timeline Styling - Enhanced Clarity */
+.timeline-container { position: relative; max-width: 1000px; margin: 4rem auto; } /* Increased max-width and margin */
+.timeline-container::before {
+    content: ''; position: absolute; width: 4px;
+    background: linear-gradient(var(--accent-color-current), var(--accent-color-secondary-current));
+    top: 0; bottom: 0; border-radius: 2px;
+}
+html[dir="ltr"] .timeline-container::before { left: 50%; margin-left: -2px; }
+html[dir="rtl"] .timeline-container::before { right: 50%; margin-right: -2px; }
+.timeline-item { padding: 15px 45px; position: relative; background-color: inherit; width: 50%; box-sizing: border-box; margin-bottom: 40px; }
+html[dir="ltr"] .timeline-item:nth-child(odd) { left: 0; text-align: right; padding-right: 65px; }
+html[dir="ltr"] .timeline-item:nth-child(even) { left: 50%; text-align: left; padding-left: 65px; }
+html[dir="rtl"] .timeline-item:nth-child(odd) { right: 0; text-align: left; padding-left: 65px; }
+html[dir="rtl"] .timeline-item:nth-child(even) { right: 50%; text-align: right; padding-right: 65px; }
+.timeline-icon {
+    position: absolute; width: 48px; height: 48px; /* Slightly larger */
+    background-color: var(--accent-color-current); color: var(--primary-color-dark);
+    border-radius: 50%; text-align: center; line-height: 48px;
+    font-size: 1.4rem; top: 20px; z-index: 1;
+    border: 4px solid var(--primary-color-current);
+    box-shadow: 0 0 15px color-mix(in srgb, var(--accent-color-current) 50%, transparent);
+}
+body.light-theme .timeline-icon { color: var(--primary-color-light); }
+html[dir="ltr"] .timeline-item:nth-child(odd) .timeline-icon { right: -24px; } /* Adjusted for size */
+html[dir="ltr"] .timeline-item:nth-child(even) .timeline-icon { left: -24px; }
+html[dir="rtl"] .timeline-item:nth-child(odd) .timeline-icon { left: -24px; }
+html[dir="rtl"] .timeline-item:nth-child(even) .timeline-icon { right: -24px; }
+.timeline-content {
+    padding: 25px; background-color: var(--card-background-current);
+    border-radius: var(--border-radius-main); box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid var(--border-color-current);
+}
+.timeline-content:hover { transform: translateY(-10px) scale(1.02); box-shadow: var(--card-hover-shadow); } /* Enhanced hover */
+.timeline-period { display: block; font-size: 0.95rem; color: var(--accent-color-secondary-current); margin-bottom: 0.6rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;}
+.timeline-content h3 { font-size: 1.6rem; margin-bottom: 0.4rem; color: var(--text-color-current); font-weight: 700;}
+.timeline-content h4 { font-size: 1.15rem; color: var(--text-color-muted-current); margin-bottom: 0.8rem; font-weight: 500; font-style: italic; }
+.timeline-content p { font-size: 1.05rem; line-height: 1.75; color: var(--text-color-muted-current); }
+
+/* Toolkit Section - Enhanced Skill Presentation */
+.toolkit-grid {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 2.5rem; /* Adjusted gap for vertical stacking */
+    padding: 2rem 0;
+}
+.toolkit-category-card {
+    border-radius: var(--border-radius-main);
+    transition: none;
+    width: 100%; /* Ensure each category takes full width */
+    margin-bottom: 2.5rem;
+    /* Removed all background, shadow, border properties */
+}
+.toolkit-category-card:last-child {
+    margin-bottom: 0; /* Remove margin from the last item */
+}
+.toolkit-category-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem; /* Increased margin */
+    /* Consider removing border or making it very subtle if one exists on h3 */
+}
+.toolkit-category-header i {
+    font-size: 2.2rem; /* Slightly reduced icon size */
+    color: var(--accent-color-current);
+    margin-inline-end: 1rem; /* Adjusted margin */
+}
+.toolkit-category-header h3 {
+    font-size: 1.7rem; /* Slightly reduced heading size */
+    margin-bottom: 0;
+    color: var(--text-color-current);
+    font-weight: 500; /* Lighter font weight for a softer look */
+    border-bottom: none; /* Remove any bottom border */
+}
+.category-description { font-size: 1.1rem; color: var(--text-color-muted-current); margin-bottom: 1.8rem; line-height: 1.7; }
+.skills-list-detailed { list-style: none; padding: 0; margin: 0; }
+.skill-item { margin-bottom: 1.8rem; } /* Increased spacing */
+.skill-name-progress { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; }
+.skill-name { font-size: 1.15rem; font-weight: 500; color: var(--text-color-current); flex-grow: 1; margin-inline-end: 1rem;}
+
+.skill-level-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem; /* Space between bar and text */
+}
+
+.progress-bar-container {
+    width: 100px; /* Adjusted width */
+    height: 12px; /* Slightly taller */
+    background-color: color-mix(in srgb, var(--border-color-current) 50%, transparent); /* Softer background */
+    border-radius: 6px; /* Adjusted radius */
+    overflow: hidden;
+    position: relative;
+    /* border: 1px solid var(--border-color-current); */ /* Optional: remove border if background is distinct enough */
+}
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-color-current), var(--accent-color-secondary-current));
+    border-radius: 6px; /* Match container */
+    transition: width 1s ease-in-out;
+    /* Text is now outside */
+}
+.skill-percentage-text {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--accent-color-current);
+    min-width: 35px; /* Ensure space for "100%" */
+    text-align: right;
+}
+
+.skill-details { font-size: 0.9rem; color: var(--text-color-muted-current); margin-top: 0.3rem; padding-inline-start: 1rem; border-inline-start: 2px solid var(--accent-color-current); }
+
+/* Recognitions Section */
+.recognitions-content {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 2.5rem; /* Adjusted gap for vertical stacking */
+    /* max-width: 1000px; */
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+/* Removed media query for specific grid columns */
+#languages-showcase, #certificates-showcase {
+    border-radius: var(--border-radius-main);
+    width: 100%; /* Ensure each item takes full width */
+    margin-bottom: 2.5rem; /* Spacing between full-row items */
+    /* Removed all background, shadow, border, padding properties */
+}
+#languages-showcase:last-child, #certificates-showcase:last-child {
+    margin-bottom: 0; /* Remove margin from the last item */
+}
+#languages-showcase h3, #certificates-showcase h3 {
+    font-size: 1.5rem; /* Slightly reduced heading size */
+    color: var(--text-color-current);
+    margin-bottom: 1.2rem; /* Adjusted margin */
+    border-bottom: 2px solid var(--accent-color-current); /* Thinner border */
+    padding-bottom: 0.6rem; /* Adjusted padding */
+    display: inline-block;
+    font-weight: 500; /* Lighter font weight */
+}
+#languages-showcase ul, .certificates-list { list-style: none; padding: 0; }
+/* #languages-showcase li { padding: 0.7rem 0; font-size: 1.1rem; color: var(--text-color-muted-current); } */ /* Commented out old li styling */
+/* #languages-showcase li strong { color: var(--text-color-current); } */ /* Commented out old strong styling */
+
+.languages-list-detailed { list-style: none; padding: 0; margin: 0; }
+.language-item { margin-bottom: 1.5rem; } /* Consistent spacing */
+.language-name-progress { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; }
+.language-name {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--text-color-current);
+    flex-grow: 1;
+    margin-inline-end: 1rem;
+}
+.language-proficiency-text { /* Fallback if no percentage */
+    font-size: 1rem;
+    color: var(--text-color-muted-current);
+}
+
+/* Styles for .skill-level-indicator, .progress-bar-container, .progress-bar, .skill-percentage-text are already defined
+   and will be reused here for consistency. No need to redefine unless specific overrides for languages are needed. */
+
+.certificates-list .certificate-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.2rem 0; /* Increased padding */
+    border-bottom: 1px solid var(--border-color-current);
+}
+.certificates-list .certificate-item:last-child { border-bottom: none; }
+
+.certificate-info {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem; /* Increased space */
+    flex-grow: 1;
+}
+
+.certificate-info i {
+    font-size: 1.6rem; /* Slightly larger icon */
+    color: var(--accent-color-current);
+    margin-inline-end: 1.2rem; /* More space for icon */
+    width: 30px; /* Wider icon container */
+    text-align: center;
+    margin-top: 0.1em;
+}
+
+.certificate-info span {
+    font-size: 1.1rem; /* Larger text */
+    color: var(--text-color-muted-current);
+}
+.certificate-info span strong {
+    color: var(--text-color-current);
+    display: block;
+    margin-bottom: 0.3rem; /* More space for name */
+    font-size: 1.2rem; /* Larger name */
+}
+.certificate-description {
+    font-size: 0.95rem; /* Slightly larger description */
+    color: var(--text-color-muted-current);
+    margin-top: 0.6rem;
+    padding-inline-start: calc(30px + 1.2rem); /* Adjust indent based on icon size/margin */
+    line-height: 1.6;
+}
+
+.download-certificate-button {
+    padding: 0.6rem 1.2rem; /* Larger button padding */
+    font-size: 0.9rem; /* Larger button font */
+    margin-top: 0.5rem;
+    align-self: flex-start;
+    background: linear-gradient(90deg, var(--accent-color-current), var(--accent-color-secondary-current));
+    color: var(--primary-color-dark) !important;
+    border-radius: var(--border-radius-main);
+    text-transform: none;
+    font-weight: 500;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+body.light-theme .download-certificate-button {
+    color: var(--primary-color-light) !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.download-certificate-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px color-mix(in srgb, var(--accent-color-current) 15%, transparent);
+}
+
+
+/* Adjust layout for wider screens where button can be beside info */
+@media (min-width: 700px) { /* Adjusted breakpoint */
+    .certificates-list .certificate-item {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .certificate-info {
+        margin-bottom: 0;
+    }
+    .download-certificate-button {
+        margin-top: 0;
+        margin-inline-start: 1.5rem; /* More space */
+        align-self: center;
+    }
+    .certificate-description {
+         padding-inline-start: calc(30px + 1.2rem); /* Keep consistent indent or adjust as needed */
+    }
+}
+
+
+/* Portfolio Section */
+.portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2.5rem; } /* Larger items, more gap */
+.portfolio-item {
+    background-color: var(--card-background-current); border-radius: var(--border-radius-main); overflow: hidden;
+    box-shadow: var(--card-shadow); transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer; border: 1px solid var(--border-color-current);
+    display: flex; flex-direction: column; /* For better content alignment */
+}
+body.light-theme .portfolio-item {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+}
+.portfolio-item:hover { transform: translateY(-12px) scale(1.035); box-shadow: var(--card-hover-shadow); } /* Enhanced hover */
+.portfolio-item img, .portfolio-item .video-placeholder { width: 100%; height: 250px; object-fit: cover; } /* Taller image */
+.portfolio-item-content { padding: 1.8rem; flex-grow: 1; display: flex; flex-direction: column; } /* Increased padding, flex for footer buttons */
+.portfolio-item-content h4 { font-size: 1.6rem; color: var(--text-color-current); margin-bottom: 0.6rem; }
+.portfolio-item-content .category { font-size: 0.95rem; color: var(--accent-color-secondary-current); margin-bottom: 1rem; display: block; font-weight: 500; }
+.portfolio-item-content p { font-size: 1.05rem; color: var(--text-color-muted-current); margin-bottom: 1.2rem; line-height: 1.7; flex-grow: 1;}
+.portfolio-item-content .technologies span {
+    background-color: var(--secondary-color-current); color: var(--accent-color-current); padding: 0.3rem 0.8rem;
+    border-radius: 20px; font-size: 0.8rem; margin-bottom: 6px; display: inline-block; font-weight: 500;
+    border: 1px solid var(--border-color-current);
+}
+html[dir="rtl"] .portfolio-item-content .technologies span { margin-left: 6px; }
+html[dir="ltr"] .portfolio-item-content .technologies span { margin-right: 6px; }
+.project-links { margin-top: 1.2rem; display: flex; gap: 12px; }
+.project-links .cta-button-small {
+    padding: 0.6rem 1.2rem; font-size: 0.9rem;
+    background: linear-gradient(90deg, var(--accent-color-current), var(--accent-color-secondary-current));
+    color: var(--primary-color-dark) !important; border-radius: var(--border-radius-main); text-transform: none;
+    font-weight: 500; border: none;
+}
+body.light-theme .project-links .cta-button-small { color: var(--primary-color-light) !important; }
+.project-links .cta-button-small.outline {
+    background: transparent; border: 1px solid var(--accent-color-current);
+    color: var(--accent-color-current) !important;
+}
+
+/* Contact Section */
+.contact-section { background-color: var(--secondary-color-current); }
+#contact-form { max-width: 800px; margin: 0 auto 3rem auto; display: grid; gap: 1.8rem; } /* Wider form, more gap */
+#contact-form input, #contact-form textarea {
+    width: 100%; padding: 1.2rem; border: 1px solid var(--border-color-current); /* Increased padding */
+    border-radius: var(--border-radius-main); background-color: var(--primary-color-current);
+    color: var(--text-color-current); font-family: inherit; box-sizing: border-box; font-size: 1.05rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+body.light-theme #contact-form input, body.light-theme #contact-form textarea {
+    background-color: var(--secondary-color-light); /* Ensure contrast for inputs on light theme */
+    border: 1px solid #CED4DA; /* Slightly darker border for inputs on light theme */
+}
+#contact-form input:focus, #contact-form textarea:focus {
+    border-color: var(--accent-color-current); outline: none;
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-color-current) 15%, transparent); /* Adjusted focus shadow */
+}
+#contact-form button {
+    background: linear-gradient(90deg, var(--accent-color-current), var(--accent-color-secondary-current));
+    color: var(--primary-color-dark); padding: 1.2rem 2.2rem; /* Increased padding */
+    border: none; border-radius: var(--border-radius-main); cursor: pointer; font-weight: bold; font-size: 1.1rem; /* Bolder */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-size: 200% auto;
+}
+body.light-theme #contact-form button {
+    color: var(--primary-color-light);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+#contact-form button:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 25px color-mix(in srgb, var(--accent-color-current) 18%, transparent);
+    background-position: right center;
+}
+#contact-info-showcase { text-align: center; margin-top: 3rem; } /* Added margin top */
+#contact-info-showcase p { margin-bottom: 1rem; font-size: 1.2rem; color: var(--text-color-muted-current); }
+#contact-info-showcase i { color: var(--accent-color-current); margin-inline-end: 1rem; font-size: 1.3rem; }
+
+/* Footer */
+footer {
+    text-align: center; padding: 3rem 5%; background-color: var(--primary-color-dark);
+    color: var(--text-color-muted-dark); font-size: 0.95rem; border-top: 1px solid var(--border-color-dark);
+}
+body.light-theme footer { background-color: var(--secondary-color-light); color: var(--text-color-muted-light); border-top: 1px solid var(--border-color-light); }
+
+/* Responsive Design Adjustments */
+@media (max-width: 1024px) { /* Adjusted breakpoint */
+    .hero-content { gap: 3rem; }
+    .hero-text h1 { font-size: 3.5rem; }
+    .hero-text #hero-title { font-size: 1.6rem; }
+    #hero-personal-photo { width: 280px; height: 280px; }
+}
+
+@media (max-width: 992px) {
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2.3rem; }
+    header { padding: 1rem 4%; }
+    .content-section { padding: 5rem 4%; }
+    
+    /* تعديل قسم البطل للشاشات المتوسطة */
+    .hero-content { 
+        grid-template-columns: 1fr; 
+        text-align: center; 
+        gap: 2.5rem; 
+        max-width: 650px;
+        margin: 0 auto;
+    }
+    html[dir="rtl"] .hero-content { grid-template-columns: 1fr; }
+    .hero-image-container { 
+        order: 1; 
+        margin-bottom: 2rem; 
+        animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+    }
+    #hero-personal-photo { 
+        width: 240px; 
+        height: 240px; 
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+    #hero-personal-photo:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 50px color-mix(in srgb, var(--accent-color-current) 40%, transparent);
+    }
+    .hero-text { order: 2; text-align: center !important; }
+    .hero-text .download-cv-button { 
+        margin-inline-start: 0; 
+        margin-top: 1rem; 
+        display: block; 
+        width: fit-content; 
+        margin-left: auto; 
+        margin-right: auto;
+    }
+    .hero-text .cta-button:not(.download-cv-button) { 
+        display: block; 
+        width: fit-content; 
+        margin-left: auto; 
+        margin-right: auto; 
+        margin-bottom: 1rem;
+    }
+
+    /* تعديل الجدول الزمني للشاشات المتوسطة */
+    html[dir="ltr"] .timeline-container::before { left: 20px; }
+    html[dir="rtl"] .timeline-container::before { right: 20px; }
+    .timeline-container::before {
+        background: linear-gradient(to bottom, var(--accent-color-current), var(--accent-color-secondary-current));
+    }
+    .timeline-item { 
+        width: 100%; 
+        padding-left: 70px; 
+        padding-right: 20px; 
+        text-align: left !important; 
+        transition: transform 0.3s ease;
+    }
+    .timeline-item:hover {
+        transform: translateX(5px);
+    }
+    html[dir="rtl"] .timeline-item { 
+        padding-right: 70px; 
+        padding-left: 20px; 
+        text-align: right !important; 
+    }
+    html[dir="rtl"] .timeline-item:hover {
+        transform: translateX(-5px);
+    }
+    html[dir="ltr"] .timeline-item:nth-child(even), html[dir="ltr"] .timeline-item:nth-child(odd) { left: 0; }
+    html[dir="rtl"] .timeline-item:nth-child(even), html[dir="rtl"] .timeline-item:nth-child(odd) { right: 0; }
+    .timeline-icon { 
+        left: -5px; 
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    .timeline-item:hover .timeline-icon {
+        transform: scale(1.1);
+    }
+    html[dir="rtl"] .timeline-icon { right: -5px; left: auto; }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.6rem; } /* Adjusted */
+    h2 { font-size: 2.1rem; } /* Adjusted */
+    header { padding: 0.8rem 4%; }
+    .content-section { padding: 4rem 4%; }
+    .nav-links {
+        position: fixed; height: 100vh; top: 0;
+        background-color: var(--primary-color-current);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        display: flex; flex-direction: column; align-items: center; justify-content: center;
+        width: 100%; z-index: 999; transition: transform 0.4s ease-in-out;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+    html[dir="rtl"] .nav-links { right: 0; transform: translateX(100%); }
+    html[dir="ltr"] .nav-links { left: 0; transform: translateX(-100%); }
+    html[dir] .nav-links.nav-active { transform: translateX(0%); }
+    body.nav-open-overflow-hidden { overflow: hidden; } /* Prevent scrolling when nav is open */
+    .nav-links.nav-active li {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    .nav-links li { 
+        margin: 1.5rem 0; 
+        opacity: 0; 
+        transform: translateY(20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        transition-delay: calc(0.05s * var(--item-index, 0));
+    }
+    .nav-links a { 
+        font-size: 1.4rem; 
+        color: var(--text-color-current); 
+        padding: 0.8rem 1.5rem;
+        border-radius: var(--border-radius-main);
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .nav-links a:hover, .nav-links a.active { 
+        background-color: color-mix(in srgb, var(--accent-color-current) 15%, transparent);
+    }
+    .nav-links a::after { display: none; } /* Hide underline on mobile nav */
+
+/* Styles for new icon buttons */
+.controls-in-nav {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+/* Mobile styles for controls-in-nav */
+.controls-in-nav button {
+    background-color: color-mix(in srgb, var(--card-background-current) 70%, transparent);
+    border: 1px solid var(--border-color-current);
+    color: var(--text-color-muted-current);
+    cursor: pointer;
+    padding: 0.7rem 1rem; /* Adjusted padding */
+    margin: 0 0.5rem;
+    border-radius: var(--border-radius-main);
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease, transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    font-size: 0.9rem; /* Ensure icon and text size are controlled if needed */
+    line-height: 1; /* Align icon properly */
+}
+
+/* Desktop styles for controls-in-nav in the main navigation */
+@media screen and (min-width: 1024px) {
+    .nav-links .controls-in-nav {
+        margin-top: 0;
+        margin-left: 1rem;
+    }
+    
+    .nav-links .controls-in-nav button {
+        padding: 0.6rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .nav-links .controls-in-nav button svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.controls-in-nav button:hover {
+    background-color: var(--accent-color-current);
+    color: var(--primary-color-light); /* Text color for contrast on accent bg */
+    border-color: var(--accent-color-current);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 4px 10px color-mix(in srgb, var(--accent-color-current) 25%, transparent);
+}
+
+/* Specific adjustment for light theme hover text color if accent is too light */
+body.light-theme .controls-in-nav button:hover {
+    color: var(--primary-color-light); /* Assuming accent-color-light is dark enough for light text */
+}
+
+/* Ensure dark theme hover text is appropriate if accent-color-dark is light */
+body:not(.light-theme) .controls-in-nav button:hover {
+    color: var(--primary-color-dark); /* If accent-color-dark is light (e.g., teal), dark text is better */
+}
+
+/* Override for very light accents in dark mode */
+body:not(.light-theme) .controls-in-nav button:hover {
+    /* If --accent-color-dark is #00F5D4 (light teal), text should be dark */
+    color: #0A0A14; /* Explicitly dark for light accents in dark mode */
+}
+
+
+
+.controls-in-nav button svg {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+
+.burger { 
+    display: block; 
+    z-index: 1001; 
+    position: relative; 
+    padding: 10px; 
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+} 
+
+.burger:hover div {
+    background-color: var(--accent-color-current);
+}
+
+.controls { display: none; } /* Keep controls hidden on mobile nav */
+    #hero-personal-photo { width: 200px; height: 200px; } /* Adjusted size */
+    .hero-text h1 { font-size: 2.4rem; } /* Adjusted */
+    .hero-text #hero-title { font-size: 1.4rem; } /* Adjusted */
+    .hero-text .typing-text-container { font-size: 1.2rem; } /* Adjusted */
+    /* .toolkit-grid rule removed as flex-direction: column handles stacking */
+    .portfolio-grid { grid-template-columns: 1fr; gap: 2rem; } /* Ensure single column */
+    /* .recognitions-content rule removed as flex-direction: column handles stacking */
+    #contact-form { gap: 1.2rem; }
+    #contact-form input, #contact-form textarea { padding: 1rem; font-size: 1rem; }
+    #contact-form button { padding: 1rem 1.8rem; font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+    /* تعديل الخطوط والعناوين */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.7rem; margin-bottom: 2rem; }
+    h2::after { width: 50px; height: 4px; margin-top: 0.7rem; }
+    h3 { font-size: 1.4rem; }
+    
+    /* تعديل الهيدر والتنقل */
+    header { padding: 0.7rem 3%; }
+    nav .logo #nav-name { font-size: 1.5rem; }
+    nav .logo img#personal-photo-nav { width: 40px; height: 40px; }
+    .burger div { width: 24px; height: 2px; margin: 5px; }
+    
+    /* تعديل قسم البطل */
+    .hero-section { padding: 3rem 3%; min-height: 85vh; }
+    .hero-content { gap: 1.5rem; }
+    .hero-text h1 { font-size: 1.8rem; margin-bottom: 0.7rem; }
+    .hero-text #hero-title { font-size: 1.1rem; margin-bottom: 1rem; }
+    .hero-text .typing-text-container { font-size: 1.1rem; margin-bottom: 1.5rem; min-height: 2rem; }
+    .hero-text #hero-tagline { font-size: 1rem; margin-bottom: 2rem; line-height: 1.6; }
+    #hero-personal-photo { width: 150px; height: 150px; border-width: 4px; }
+    
+    /* تعديل الأزرار */
+    .cta-button, .hero-text .download-cv-button { 
+        padding: 0.8rem 1.8rem; 
+        font-size: 0.85rem; 
+        width: 100%; /* جعل الأزرار تأخذ العرض الكامل */
+        max-width: 280px;
+        margin: 0.5rem auto;
+        text-align: center;
+    }
+    
+    /* تعديل الأقسام */
+    .content-section { padding: 3rem 3%; }
+    .section-intro { font-size: 1rem; margin-bottom: 2.5rem; }
+    
+    /* تعديل الجدول الزمني */
+    .timeline-container { margin: 2.5rem auto; }
+    .timeline-item { 
+        padding-left: 55px; 
+        padding-right: 10px; 
+        margin-bottom: 25px;
+    }
+    html[dir="rtl"] .timeline-item { padding-right: 55px; padding-left: 10px; }
+    .timeline-icon { 
+        width: 36px; 
+        height: 36px; 
+        line-height: 36px; 
+        font-size: 1.1rem; 
+        border-width: 3px;
+        top: 15px;
+    }
+    .timeline-content { padding: 18px; }
+    .timeline-content h3 { font-size: 1.3rem; }
+    .timeline-content h4 { font-size: 1rem; }
+    .timeline-content p { font-size: 0.95rem; }
+    .timeline-period { font-size: 0.85rem; }
+    
+    /* تعديل المهارات واللغات */
+    .toolkit-category-header i { font-size: 1.8rem; }
+    .toolkit-category-header h3 { font-size: 1.5rem; }
+    .category-description { font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .skill-name, .language-name { font-size: 1rem; }
+    .skill-percentage-text { font-size: 0.85rem; }
+    .skill-details { font-size: 0.85rem; }
+    .progress-bar-container { width: 80px; height: 10px; }
+    
+    /* تعديل الشهادات */
+    .certificate-info i { font-size: 1.4rem; width: 25px; }
+    .certificate-info span { font-size: 0.95rem; }
+    
+    /* تعديل نموذج الاتصال */
+    #contact-form { gap: 1rem; }
+    #contact-form input, #contact-form textarea { padding: 0.8rem; font-size: 0.95rem; }
+    #contact-form button { padding: 0.9rem 1.5rem; font-size: 0.95rem; width: 100%; }
+    
+    /* تعديل التذييل */
+    footer { padding: 2rem 3%; font-size: 0.85rem; }
+    
+    /* تحسينات إضافية للهواتف */
+    .about-me-intro-section { padding: 3rem 3%; }
+    .about-me-intro-section .tagline { font-size: 1.2rem; margin-bottom: 1.5rem; }
+    .about-me-intro-section p:not(.tagline) { font-size: 1rem; line-height: 1.7; }
+    
+    /* تحسين تأثيرات الانتقال */
+    .timeline-content:hover { transform: translateY(-5px) scale(1.01); }
+    
+    /* تحسين تجربة المستخدم */
+    .nav-links a { padding: 1rem 1.5rem; }
+    .controls-in-nav { margin-top: 1.5rem; }
+    /* .controls-in-nav button { padding: 0.6rem 0.9rem; } */ /* Removed as general style now matches */
+}
+
+/* استعلام وسائط للشاشات الصغيرة جداً */
+@media (max-width: 375px) {
+    /* تعديل الخطوط والعناوين */
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.3rem; }
+    
+    /* تعديل الهيدر والتنقل */
+    nav .logo #nav-name { font-size: 1.3rem; }
+    nav .logo img#personal-photo-nav { width: 35px; height: 35px; }
+    
+    /* تعديل قسم البطل */
+    .hero-section { padding: 2.5rem 3%; }
+    .hero-text h1 { font-size: 1.6rem; }
+    .hero-text #hero-title { font-size: 1rem; }
+    .hero-text .typing-text-container { font-size: 1rem; }
+    #hero-personal-photo { width: 130px; height: 130px; }
+    
+    /* تعديل الأزرار */
+    .cta-button, .hero-text .download-cv-button { 
+        padding: 0.7rem 1.5rem; 
+        font-size: 0.8rem; 
+    }
+    
+    /* تعديل الجدول الزمني */
+    .timeline-item { 
+        padding-left: 45px; 
+        padding-right: 8px; 
+    }
+    html[dir="rtl"] .timeline-item { padding-right: 45px; padding-left: 8px; }
+    .timeline-icon { 
+        width: 32px; 
+        height: 32px; 
+        line-height: 32px; 
+        font-size: 1rem; 
+    }
+    .timeline-content { padding: 15px; }
+    .timeline-content h3 { font-size: 1.2rem; }
+    
+    /* تعديل المهارات واللغات */
+    .toolkit-category-header i { font-size: 1.6rem; }
+    .toolkit-category-header h3 { font-size: 1.3rem; }
+    .skill-name, .language-name { font-size: 0.95rem; }
+    .progress-bar-container { width: 70px; }
+    
+    /* تعديل نموذج الاتصال */
+    #contact-form input, #contact-form textarea { padding: 0.7rem; font-size: 0.9rem; }
+}
+    html[dir="ltr"] .timeline-item:nth-child(odd) .timeline-icon { right: -20px; }
+    html[dir="ltr"] .timeline-item:nth-child(even) .timeline-icon { left: -20px; }
+    html[dir="rtl"] .timeline-item:nth-child(odd) .timeline-icon { left: -20px; }
+    html[dir="rtl"] .timeline-item:nth-child(even) .timeline-icon { right: -20px; }
+    .toolkit-category-header i { font-size: 2rem; }
+    .toolkit-category-header h3 { font-size: 1.6rem; }
+    .skill-name { font-size: 1.05rem; }
+    .certificate-info i { font-size: 1.4rem; margin-inline-end: 0.8rem; width: 25px; }
+    .certificate-info span strong { font-size: 1.1rem; }
+    .download-certificate-button { padding: 0.5rem 1rem; font-size: 0.8rem;}
+
+/* Nav Link Fade Animations */
+@keyframes navLinkFadeRTL { from { opacity: 0; transform: translateX(60px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes navLinkFadeLTR { from { opacity: 0; transform: translateX(-60px); } to { opacity: 1; transform: translateX(0); } }
+/* Burger Animation */
+.toggle .line1 { transform: rotate(45deg) translate(6px,7px); }
+.toggle .line2 { opacity: 0; }
+.toggle .line3 { transform: rotate(-45deg) translate(6px,-7px); }
+html[dir="rtl"] .toggle .line1 { transform: rotate(-45deg) translate(-6px,7px); }
+html[dir="rtl"] .toggle .line3 { transform: rotate(45deg) translate(-6px,-7px); }
+
+/* Define RGB versions of theme colors for opacity in RGBA */
+:root {
+    --primary-color-dark-rgb: 10, 10, 20;
+    --primary-color-light-rgb: 248, 249, 250;
+}
