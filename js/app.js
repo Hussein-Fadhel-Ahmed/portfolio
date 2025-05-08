@@ -96,6 +96,48 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             requestAnimationFrame(() => this.animateHeroParticles());
         },
+        
+        setupMobileNavigation() {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            const navLinks = document.querySelectorAll('.nav-links li');
+            
+            if (burger && nav) {
+                burger.addEventListener('click', () => {
+                    // Toggle Nav
+                    nav.classList.toggle('nav-active');
+                    
+                    // Toggle Burger Animation
+                    burger.classList.toggle('toggle');
+                    
+                    // Animate Links
+                    const isRTL = document.documentElement.dir === 'rtl';
+                    const animationName = isRTL ? 'navLinkFadeRTL' : 'navLinkFade';
+                    
+                    navLinks.forEach((link, index) => {
+                        if (link.style.animation) {
+                            link.style.animation = '';
+                        } else {
+                            link.style.animation = `${animationName} 0.5s ease forwards ${index / 7 + 0.3}s`;
+                        }
+                    });
+                });
+                
+                // Close mobile menu when clicking on a link
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (nav.classList.contains('nav-active')) {
+                            nav.classList.remove('nav-active');
+                            burger.classList.remove('toggle');
+                            
+                            navLinks.forEach(link => {
+                                link.style.animation = '';
+                            });
+                        }
+                    });
+                });
+            }
+        },
 
 
         async loadData() {
@@ -550,7 +592,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     this.setLanguage(newLang);
                 });
             }
-
+            
+            // Mobile Navigation
             const burger = document.querySelector('.burger');
             const navLinks = document.querySelector('.nav-links');
             const navLinkItems = document.querySelectorAll('.nav-links li');

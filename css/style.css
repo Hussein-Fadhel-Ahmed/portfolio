@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 /* General Styles & Variables - Inspired by x.ai & trae.ai aesthetics */
 :root {
     /* Font Settings for Luxury Look */
@@ -61,6 +65,572 @@ body.light-theme {
 
 /* Import Google Fonts (Removed as we now load them in HTML) */
 /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Tajawal:wght@400;500;700&display=swap'); */
+
+/* Mobile Responsive Design */
+@media screen and (max-width: 768px) {
+    /* General Typography Adjustments */
+    body {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; margin-bottom: 2rem; }
+    h3 { font-size: 1.4rem; }
+    
+    /* Improved Navigation for Mobile */
+    header {
+        padding: 0.8rem 5%;
+    }
+    
+    nav .logo #nav-name {
+        font-size: 1.4rem;
+    }
+    
+    nav .logo img#personal-photo-nav {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        height: 100vh;
+        width: 80%;
+        background-color: var(--card-background-current);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in;
+        z-index: 1001;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        padding: 2rem 0;
+    }
+    
+    html[dir="rtl"] .nav-links {
+        transform: translateX(100%);
+        right: 0;
+        left: auto;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    }
+    
+    html[dir="ltr"] .nav-links {
+        left: 0;
+        right: auto;
+    }
+    
+    .nav-links.nav-active {
+        transform: translateX(0);
+    }
+    
+    .nav-links li {
+        margin: 1.5rem 0;
+        opacity: 0;
+        transition: opacity 0.2s ease-in 0.2s;
+    }
+    
+    .nav-links.nav-active li {
+        opacity: 1;
+    }
+    
+    .nav-links a {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.2rem;
+    }
+    
+    .burger {
+        display: block;
+        z-index: 1002;
+    }
+    
+    /* Hero Section Adjustments */
+    .hero-section {
+        padding: 2rem 5%;
+        min-height: 85vh;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    html[dir="rtl"] .hero-content,
+    html[dir="ltr"] .hero-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-image-container {
+        order: 1 !important;
+    }
+    
+    .hero-text {
+        order: 2 !important;
+        text-align: center !important;
+    }
+    
+    #hero-personal-photo {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.4rem;
+    }
+    
+    .hero-text #hero-title {
+        font-size: 1.4rem;
+    }
+    
+    .hero-text .typing-text-container {
+        font-size: 1.2rem;
+    }
+    
+    .cta-button, .hero-text .download-cv-button {
+        padding: 0.9rem 1.8rem;
+        font-size: 0.9rem;
+        display: block;
+        margin: 1rem auto;
+        width: 80%;
+        max-width: 300px;
+        text-align: center;
+    }
+    
+    /* Content Sections Adjustments */
+    .content-section {
+        padding: 3rem 5%;
+    }
+    
+    .section-intro {
+        font-size: 1.1rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    /* Timeline Radical Redesign for Tablets */
+    .timeline-container::before {
+        width: 6px;
+        background: linear-gradient(180deg, var(--accent-color-current), var(--accent-color-secondary-current));
+        left: 30px !important;
+        right: auto !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        border-radius: 3px;
+        opacity: 0.7;
+    }
+    
+    html[dir="rtl"] .timeline-container::before {
+        left: auto !important;
+        right: 30px !important;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px !important;
+        padding-right: 15px !important;
+        text-align: left !important;
+        left: 0 !important;
+        margin-bottom: 3rem;
+        transition: transform 0.4s ease;
+    }
+    
+    .timeline-item:hover {
+        transform: translateX(5px);
+    }
+    
+    html[dir="rtl"] .timeline-item {
+        padding-right: 70px !important;
+        padding-left: 15px !important;
+        text-align: right !important;
+        right: 0 !important;
+        left: auto !important;
+    }
+    
+    html[dir="rtl"] .timeline-item:hover {
+        transform: translateX(-5px);
+    }
+    
+    .timeline-icon {
+        left: 6px !important;
+        right: auto !important;
+        width: 54px;
+        height: 54px;
+        line-height: 54px;
+        font-size: 1.5rem;
+        box-shadow: 0 0 20px rgba(0, 245, 212, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .timeline-icon:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 25px rgba(0, 245, 212, 0.5);
+    }
+    
+    html[dir="rtl"] .timeline-icon {
+        right: 6px !important;
+        left: auto !important;
+    }
+    
+    .timeline-content {
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        border: none;
+        position: relative;
+        z-index: 1;
+        padding: 25px;
+    }
+    
+    .timeline-period {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 15px;
+        background: linear-gradient(90deg, var(--accent-color-current), var(--accent-color-secondary-current));
+        color: var(--primary-color-dark);
+        font-weight: 600;
+        margin-bottom: 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    body.light-theme .timeline-period {
+        color: var(--primary-color-light);
+    }
+    
+    /* Adjust content padding */
+    .timeline-content {
+        padding: 25px 20px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.4rem;
+    }
+    
+    /* Toolkit Grid Adjustments */
+    .toolkit-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .toolkit-category {
+        padding: 1.5rem;
+    }
+    
+    /* Portfolio Grid Adjustments */
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .portfolio-item {
+        height: auto;
+    }
+    
+    /* Contact Form Adjustments */
+    #contact-form input,
+    #contact-form textarea {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+    
+    #contact-form button {
+        padding: 0.9rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    /* Recognition Section Adjustments */
+    .recognitions-content {
+        flex-direction: column;
+    }
+    
+    #languages-showcase,
+    #certificates-showcase {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    
+    .language-item,
+    .certificate-item {
+        padding: 1rem;
+    }
+    
+    /* Footer Adjustments */
+    footer {
+        padding: 1.5rem 5%;
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Phone Adjustments */
+@media screen and (max-width: 480px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.6rem; }
+    
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    #hero-personal-photo {
+        width: 180px;
+        height: 180px;
+    }
+    
+    /* Timeline Radical Redesign for Small Phones */
+    .timeline-container::before {
+        display: none; /* Remove the timeline line */
+    }
+    
+    .timeline-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        margin-bottom: 4rem;
+        padding: 0 !important;
+        text-align: center !important;
+        left: 0 !important;
+        right: 0 !important;
+        position: relative;
+        display: block;
+        transform: none !important;
+    }
+    
+    .timeline-item:hover .timeline-content {
+        transform: translateY(-5px);
+    }
+    
+    .timeline-item:hover .timeline-icon {
+        transform: translateX(-50%) scale(1.1);
+        box-shadow: 0 0 25px rgba(0, 245, 212, 0.5);
+    }
+    
+    .timeline-icon {
+        position: absolute;
+        left: 50% !important;
+        right: auto !important;
+        top: -30px;
+        transform: translateX(-50%);
+        margin: 0;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 1.6rem;
+        z-index: 10;
+        box-shadow: 0 0 20px rgba(0, 245, 212, 0.4);
+        border-width: 5px;
+    }
+    
+    .timeline-content {
+        padding: 50px 20px 25px;
+        margin-top: 30px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        border: none;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: visible;
+    }
+    
+    /* Hover effect moved to timeline-item */
+    
+    .timeline-period {
+        display: inline-block;
+        padding: 5px 15px;
+        border-radius: 20px;
+        background: linear-gradient(90deg, var(--accent-color-current), var(--accent-color-secondary-current));
+        color: var(--primary-color-dark);
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+    
+    body.light-theme .timeline-period {
+        color: var(--primary-color-light);
+    }
+    
+    .cta-button, .hero-text .download-cv-button {
+        width: 100%;
+    }
+    
+    .timeline-content {
+        padding: 15px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+        background: linear-gradient(90deg, var(--accent-color-current), var(--accent-color-secondary-current));
+        -webkit-background-clip: text;
+background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        position: relative;
+    }
+    
+    /* Add animated indicator for active experience */
+    .timeline-item:first-child .timeline-content::after {
+        content: 'Current';
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: linear-gradient(90deg, var(--accent-color-current), var(--accent-color-secondary-current));
+        color: var(--primary-color-dark);
+        padding: 3px 10px;
+        border-radius: 12px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        animation: pulse 2s infinite;
+        z-index: 15;
+    }
+    
+    html[dir="rtl"] .timeline-item:first-child .timeline-content::after {
+        content: 'حالي';
+        left: 15px;
+        right: auto;
+    }
+    
+    @keyframes pulse {
+        0% { opacity: 0.7; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.05); }
+        100% { opacity: 0.7; transform: scale(1); }
+    }
+    
+    .timeline-content h4 {
+        font-size: 1.1rem;
+        margin-bottom: 1.2rem;
+        font-weight: 500;
+    }
+    
+    .timeline-content p {
+        font-size: 0.95rem;
+        line-height: 1.8;
+        margin-top: 1rem;
+        position: relative;
+        padding-top: 1rem;
+    }
+    
+    .timeline-content p::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 3px;
+        background: linear-gradient(90deg, var(--accent-color-current), var(--accent-color-secondary-current));
+        border-radius: 2px;
+    }
+    
+    .toolkit-category h3 {
+        font-size: 1.2rem;
+    }
+    
+    .skill-item {
+        padding: 0.6rem 1rem;
+        margin: 0.3rem;
+        font-size: 0.9rem;
+    }
+    
+    .portfolio-item-overlay h3 {
+        font-size: 1.2rem;
+    }
+    
+    .portfolio-item-overlay p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Animation for Mobile Navigation Links */
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* RTL direction animation */
+@keyframes navLinkFadeRTL {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+html[dir="rtl"] .nav-links.nav-active li {
+    animation-name: navLinkFadeRTL;
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) {
+    .nav-links a {
+        padding: 12px 16px;
+        min-height: 44px; /* Apple's recommended minimum touch target size */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .cta-button, .hero-text .download-cv-button {
+        padding: 12px 24px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    input, textarea, button, select {
+        font-size: 16px; /* Prevents iOS zoom on focus */
+        min-height: 44px;
+    }
+    
+    .portfolio-item-overlay {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    
+    /* Improve touch targets for all interactive elements */
+    button, .burger, .controls button, .nav-links .controls-in-nav button {
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Add tap highlight color for better feedback */
+    a, button, input[type="submit"], .burger, .portfolio-item {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Improve scrolling performance */
+    .content-section, .hero-section {
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Fix for iOS Safari 100vh issue */
+    .hero-section {
+        height: calc(100vh - 80px); /* Adjust based on your header height */
+        min-height: 500px;
+    }
+}
 
 body {
     font-family: var(--font-family-sans-serif);
@@ -131,7 +701,7 @@ h2::after {
 h3 { font-size: 1.6rem; }
 a { color: var(--accent-color-current); text-decoration: none; transition: color var(--transition-speed) ease, opacity 0.2s ease; }
 a:hover { color: var(--accent-color-secondary-current); opacity: 0.85; }
-img { max-width: 100%; height: auto; display: block; }
+img, video, iframe, embed, object { max-width: 100%; height: auto; display: block; }
 
 /* Header & Navigation - Modernized */
 header {
@@ -772,40 +1342,69 @@ body.light-theme footer { background-color: var(--secondary-color-light); color:
     html[dir="rtl"] .hero-text {
         order: 2; /* Ensure text is second */
     }
-    /* تعديل الجدول الزمني للشاشات المتوسطة */
-    html[dir="ltr"] .timeline-container::before { left: 20px; }
-    html[dir="rtl"] .timeline-container::before { right: 20px; }
+    /* تعديل الجدول الزمني للشاشات المتوسطة - تصميم عمود واحد محسن */
     .timeline-container::before {
+        width: 3px; /* خط أنحف قليلاً */
         background: linear-gradient(to bottom, var(--accent-color-current), var(--accent-color-secondary-current));
     }
-    .timeline-item { 
-        width: 100%; 
-        padding-left: 70px; 
-        padding-right: 20px; 
-        text-align: left !important; 
+    html[dir="ltr"] .timeline-container::before { left: 25px; /* إزاحة الخط قليلاً */ }
+    html[dir="rtl"] .timeline-container::before { right: 25px; /* إزاحة الخط قليلاً */ }
+
+    .timeline-item {
+        width: 100%;
+        padding: 0; /* إزالة الحشوة الافتراضية، ستتم إدارتها بواسطة محتوى الخط الزمني */
+        margin-bottom: 30px; /* تقليل المسافة السفلية قليلاً */
+        box-sizing: border-box;
+        /* text-align will be inherited or set by .timeline-content */
         transition: transform 0.3s ease;
     }
-    .timeline-item:hover {
-        transform: translateX(5px);
-    }
-    html[dir="rtl"] .timeline-item { 
-        padding-right: 70px; 
-        padding-left: 20px; 
-        text-align: right !important; 
+    html[dir="ltr"] .timeline-item:hover {
+        transform: translateX(3px);
     }
     html[dir="rtl"] .timeline-item:hover {
-        transform: translateX(-5px);
+        transform: translateX(-3px);
     }
-    html[dir="ltr"] .timeline-item:nth-child(even), html[dir="ltr"] .timeline-item:nth-child(odd) { left: 0; }
-    html[dir="rtl"] .timeline-item:nth-child(even), html[dir="rtl"] .timeline-item:nth-child(odd) { right: 0; }
-    .timeline-icon { 
-        left: -5px; 
+
+    /* التأكد من أن العناصر تأخذ العرض الكامل ومحاذاة لليسار/اليمين بشكل صحيح */
+    html[dir="ltr"] .timeline-item:nth-child(even),
+    html[dir="ltr"] .timeline-item:nth-child(odd) {
+        left: 0;
+        padding-right: 15px; /* حشوة عامة على الجانب البعيد */
+    }
+    html[dir="rtl"] .timeline-item:nth-child(even),
+    html[dir="rtl"] .timeline-item:nth-child(odd) {
+        right: 0;
+        padding-left: 15px; /* حشوة عامة على الجانب البعيد */
+    }
+
+    .timeline-icon {
+        /* icon size is 48px from general styles */
+        /* border-width is 4px from general styles */
+        /* top: 20px from general styles */
         transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    html[dir="ltr"] .timeline-icon {
+        left: calc(25px - (48px / 2)); /* (line_position - icon_width/2) */
+    }
+    html[dir="rtl"] .timeline-icon {
+        right: calc(25px - (48px / 2)); /* (line_position - icon_width/2) */
+        left: auto;
     }
     .timeline-item:hover .timeline-icon {
         transform: scale(1.1);
     }
-    html[dir="rtl"] .timeline-icon { right: -5px; left: auto; }
+    
+    .timeline-content {
+        /* padding: 25px; from general styles */
+        /* background, border-radius, box-shadow from general styles */
+        text-align: initial; /* Allow natural text alignment based on dir */
+    }
+    html[dir="ltr"] .timeline-content {
+        margin-left: calc(25px + (48px / 2) + 15px); /* line_pos + icon_radius + gap */
+    }
+    html[dir="rtl"] .timeline-content {
+        margin-right: calc(25px + (48px / 2) + 15px); /* line_pos + icon_radius + gap */
+    }
 }
 
 @media (max-width: 768px) {
@@ -978,7 +1577,74 @@ body:not(.light-theme) .controls-in-nav button:hover {
         font-size: 0.9rem;
     }
 
-    .portfolio-grid { grid-template-columns: 1fr; gap: 2rem; } /* Ensure single column */
+    .portfolio-grid {
+        display: flex; /* Changed from grid to flex */
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .portfolio-item {
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+        border-bottom: 1px solid var(--border-color-current);
+        border-radius: 0;
+        padding-bottom: 1.5rem;
+        margin-bottom: 1.5rem; /* Add margin for spacing if padding is on content */
+        cursor: default; /* Remove pointer cursor if it's just a list */
+    }
+    .portfolio-item:hover {
+        transform: none; /* Disable hover transform */
+        box-shadow: none; /* Disable hover shadow */
+    }
+    .portfolio-grid .portfolio-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+    .portfolio-item img, .portfolio-item .video-placeholder {
+        height: 180px; /* Reduced image height */
+        object-fit: cover;
+        border-radius: var(--border-radius-main) var(--border-radius-main) 0 0; /* Optional: keep top radius for image */
+    }
+    .portfolio-item-content {
+        padding: 1rem 0 0 0; /* Remove horizontal padding */
+    }
+    .portfolio-item-content h4 {
+        font-size: 1.2rem; /* Adjust font size */
+    }
+    .portfolio-item-content .category {
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+    }
+    .portfolio-item-content p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 0.8rem;
+        /* Consider using a text-overflow ellipsis for very short descriptions */
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Limit to 2 lines */
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .portfolio-item-content .technologies {
+        margin-bottom: 0.8rem;
+    }
+    .portfolio-item-content .technologies span {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.6rem;
+        margin-bottom: 4px;
+        margin-right: 4px;
+    }
+    .project-links {
+        gap: 8px;
+        justify-content: flex-start; /* Align links to the start */
+    }
+    .project-links .cta-button-small {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
     #contact-form { gap: 1.2rem; }
     #contact-form input, #contact-form textarea { padding: 1rem; font-size: 1rem; }
     #contact-form button { padding: 1rem 1.8rem; font-size: 1rem; }
@@ -1020,24 +1686,97 @@ body:not(.light-theme) .controls-in-nav button:hover {
     .content-section { padding: 3rem 3%; }
     .section-intro { font-size: 1rem; margin-bottom: 2.5rem; }
     
-    /* تعديل الجدول الزمني */
-    .timeline-container { margin: 2.5rem auto; }
-    .timeline-item { 
-        padding-left: 55px; 
-        padding-right: 10px; 
-        margin-bottom: 25px;
+    /* تعديل الجدول الزمني @ 480px - تصميم مكدس كامل العرض */
+    .timeline-container {
+        margin: 2rem auto;
+        padding: 0 15px; /* إضافة حشوة جانبية للحاوية نفسها */
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
-    html[dir="rtl"] .timeline-item { padding-right: 55px; padding-left: 10px; }
-    .timeline-icon { 
-        width: 36px; 
-        height: 36px; 
-        line-height: 36px; 
-        font-size: 1.1rem; 
-        border-width: 3px;
-        top: 15px;
+    .timeline-container::before {
+        display: none; /* إزالة الخط العمودي تمامًا */
     }
-    .timeline-content { padding: 18px; }
-    .timeline-content h3 { font-size: 1.3rem; }
+
+    .timeline-item {
+        width: 100%;
+        padding: 0; /* إزالة أي حشوة متبقية من التخطيطات الأكبر */
+        margin-bottom: 20px; /* مسافة بين بطاقات الخبرة */
+        position: relative; /* لتموضع الأيقونة إذا لزم الأمر بشكل مختلف */
+        left: auto !important; /* تجاوز أي تحديد لموضع اليسار */
+        right: auto !important; /* تجاوز أي تحديد لموضع اليمين */
+    }
+    html[dir="ltr"] .timeline-item,
+    html[dir="rtl"] .timeline-item {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: initial !important; /* السماح للمحتوى بتحديد المحاذاة */
+    }
+
+
+    .timeline-icon {
+        position: relative; /* تغيير التموضع */
+        display: inline-block; /* جعله يتدفق مع النص أو ككتلة صغيرة */
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        font-size: 1rem;
+        border-width: 2px;
+        top: auto; /* إزالة التموضع العلوي المطلق */
+        left: auto; /* إزالة التموضع الأيسر المطلق */
+        right: auto; /* إزالة التموضع الأيمن المطلق */
+        margin-bottom: 0.5rem; /* مسافة أسفل الأيقونة */
+        /* يمكن وضعه بجانب العنوان أو فوقه */
+    }
+    /* إذا أردت الأيقونة بجانب العنوان الرئيسي للبطاقة */
+    .timeline-icon { /* Already relative, inline-block from L1085-1097 */
+        margin-right: 0.5rem; /* Space between icon and text */
+        margin-bottom: 0; /* Remove bottom margin if it's inline with title */
+        vertical-align: middle; /* Align with text */
+    }
+    html[dir="rtl"] .timeline-icon {
+        margin-left: 0.5rem;
+        margin-right: 0;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.3rem;
+        display: flex; /* Use flex to align icon and title */
+        align-items: center;
+        padding-left: 0 !important; /* Override previous padding */
+        padding-right: 0 !important; /* Override previous padding */
+    }
+    /* Remove inline icon positioning as it's now part of h3 flex */
+    html[dir="ltr"] .timeline-content h3 .timeline-icon-inline,
+    html[dir="rtl"] .timeline-content h3 .timeline-icon-inline {
+        position: static;
+        transform: none;
+    }
+     .timeline-icon-block-display {
+        display: none; /* Hide this if we are using icon inside h3 */
+    }
+
+    .timeline-period {
+        font-weight: 600; /* Make period more prominent */
+        color: var(--accent-color-current);
+        margin-bottom: 0.25rem;
+    }
+    .timeline-content {
+        padding: 1rem 0; /* Adjusted padding */
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+        border-bottom: 1px solid var(--border-color-current);
+        border-radius: 0;
+    }
+    .timeline-item:last-child .timeline-content {
+        border-bottom: none;
+    }
+    /* .timeline-content h3 is styled above */
     .timeline-content h4 { font-size: 1rem; }
     .timeline-content p { font-size: 0.95rem; }
     .timeline-period { font-size: 0.85rem; }
@@ -1115,20 +1854,30 @@ body:not(.light-theme) .controls-in-nav button:hover {
         font-size: 0.8rem; 
     }
     
-    /* تعديل الجدول الزمني */
-    .timeline-item { 
-        padding-left: 45px; 
-        padding-right: 8px; 
+    /* تعديل الجدول الزمني @ 375px - تحسينات إضافية للتصميم المكدس */
+    .timeline-container {
+        padding: 0 5px; /* تقليل الحشوة الجانبية للحاوية */
     }
-    html[dir="rtl"] .timeline-item { padding-right: 45px; padding-left: 8px; }
-    .timeline-icon { 
-        width: 32px; 
-        height: 32px; 
-        line-height: 32px; 
-        font-size: 1rem; 
+    /* .timeline-container::before is already display: none from 480px */
+
+    .timeline-item {
+        margin-bottom: 15px; /* تقليل المسافة أكثر */
     }
-    .timeline-content { padding: 15px; }
-    .timeline-content h3 { font-size: 1.2rem; }
+    /* padding-left and padding-right are already 0 from 480px */
+
+    .timeline-icon {
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        font-size: 0.9rem;
+        margin-bottom: 0.4rem;
+    }
+    /* Adjust padding for h3 if icon is inline */
+    /* Styles for h3 padding and icon are inherited from 480px if not overridden */
+    /* Icon size itself is already adjusted at L1230 */
+
+    /* margin-left and margin-right are already 0 from 480px */
+    .timeline-content h3 { font-size: 1.2rem; } /* Keep specific font size adjustment */
     
     /* تعديل المهارات واللغات */
     .toolkit-category-header i { font-size: 1.6rem; }
