@@ -508,6 +508,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             portfolioGrid.innerHTML = '';
 
+            // Process existing projects
             currentLangPortfolio.projects.forEach(project => {
                 const item = document.createElement('div');
                 item.classList.add('portfolio-item');
@@ -515,11 +516,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 let mediaHtml = '';
                 if (project.video_url) {
-                    mediaHtml = `<div class="video-placeholder">${lang === 'ar' ? 'فيديو' : 'Video'}: ${project.title}</div>`;
+                    // Create a video element for the project with proper styling
+                    mediaHtml = `<div class="portfolio-media-container video-container">
+                        <video class="portfolio-video" controls preload="metadata">
+                            <source src="${project.video_url}" type="video/mp4">
+                            ${lang === 'ar' ? 'متصفحك لا يدعم تشغيل الفيديو' : 'Your browser does not support the video tag'}
+                        </video>
+                    </div>`;
                 } else if (project.image) {
-                    mediaHtml = `<img src="${project.image}" alt="${project.title}">`;
+                    mediaHtml = `<div class="portfolio-media-container">
+                        <img src="${project.image}" alt="${project.title}">
+                    </div>`;
                 } else {
-                    mediaHtml = `<div class="video-placeholder">${lang === 'ar' ? 'مشروع' : 'Project'}: ${project.title} (${lang === 'ar' ? 'لا توجد صورة' : 'No image'})</div>`;
+                    mediaHtml = `<div class="portfolio-media-container">
+                        <div class="video-placeholder">${lang === 'ar' ? 'مشروع' : 'Project'}: ${project.title} (${lang === 'ar' ? 'لا توجد صورة' : 'No image'})</div>
+                    </div>`;
                 }
 
                 item.innerHTML = `
@@ -539,6 +550,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
                 portfolioGrid.appendChild(item);
             });
+            
+            // Add a placeholder card for future projects
+            const comingSoonItem = document.createElement('div');
+            comingSoonItem.classList.add('portfolio-item', 'coming-soon-item');
+            
+            const comingSoonText = lang === 'ar' ? 
+                'سيتم إضافة المزيد من المشاريع تدريجياً. ترقبوا الإضافات الجديدة!' : 
+                'More projects will be added gradually. Stay tuned for new additions!';
+                
+            comingSoonItem.innerHTML = `
+                <div class="portfolio-media-container">
+                    <div class="coming-soon-placeholder">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
+                <div class="portfolio-item-content">
+                    <h4>${lang === 'ar' ? 'قريباً' : 'Coming Soon'}</h4>
+                    <span class="category">${lang === 'ar' ? 'مشاريع مستقبلية' : 'Future Projects'}</span>
+                    <p>${comingSoonText}</p>
+                </div>
+            `;
+            
+            portfolioGrid.appendChild(comingSoonItem);
         },
 
         applyTheme(themeName) {
