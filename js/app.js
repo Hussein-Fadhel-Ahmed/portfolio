@@ -516,13 +516,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 let mediaHtml = '';
                 if (project.video_url) {
-                    // Create a video element for the project with proper styling
-                    mediaHtml = `<div class="portfolio-media-container video-container">
-                        <video class="portfolio-video" controls preload="metadata">
-                            <source src="${project.video_url}" type="video/mp4">
-                            ${lang === 'ar' ? 'متصفحك لا يدعم تشغيل الفيديو' : 'Your browser does not support the video tag'}
-                        </video>
-                    </div>`;
+                    // Check if it's a YouTube URL
+                    if (project.video_url.includes('youtu.be') || project.video_url.includes('youtube.com')) {
+                        // Extract video ID from YouTube URL
+                        let videoId = '';
+                        if (project.video_url.includes('youtu.be')) {
+                            // Format: https://youtu.be/VIDEO_ID
+                            videoId = project.video_url.split('/').pop().split('?')[0];
+                        } else if (project.video_url.includes('youtube.com/watch')) {
+                            // Format: https://www.youtube.com/watch?v=VIDEO_ID
+                            const urlParams = new URLSearchParams(project.video_url.split('?')[1]);
+                            videoId = urlParams.get('v');
+                        }
+                        
+                        if (videoId) {
+                            // Create an iframe for YouTube video
+                            mediaHtml = `<div class="portfolio-media-container video-container">
+                                <iframe class="portfolio-video" 
+                                    src="https://www.youtube.com/embed/${videoId}" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>`;
+                        } else {
+                            // Fallback if video ID extraction fails
+                            mediaHtml = `<div class="portfolio-media-container video-container">
+                                <div class="video-placeholder">${lang === 'ar' ? 'رابط فيديو غير صالح' : 'Invalid video URL'}</div>
+                            </div>`;
+                        }
+                    } else {
+                        // Regular video file
+                        mediaHtml = `<div class="portfolio-media-container video-container">
+                            <video class="portfolio-video" controls preload="metadata">
+                                <source src="${project.video_url}" type="video/mp4">
+                                ${lang === 'ar' ? 'متصفحك لا يدعم تشغيل الفيديو' : 'Your browser does not support the video tag'}
+                            </video>
+                        </div>`;
+                    }
                 } else if (project.image) {
                     mediaHtml = `<div class="portfolio-media-container">
                         <img src="${project.image}" alt="${project.title}">
